@@ -709,3 +709,29 @@ document.querySelectorAll(".th-num1").forEach((btn)=>{
 
 
 
+
+
+// Dark Mode Toggle
+(function() {
+    const btn = document.createElement('button');
+    btn.className = 'dark-mode-toggle';
+    btn.innerHTML = 'Toggle Dark Mode';
+    btn.setAttribute('aria-label', 'Toggle Dark Mode');
+    document.body.appendChild(btn);
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    }
+
+    btn.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+})();

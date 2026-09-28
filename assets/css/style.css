@@ -1891,7 +1891,7 @@ h5.preloader-text {
   }
 }
 h5.preloader-text::after {
-  content: "Pixelor";
+  content: "Sanzog";
   position: absolute;
   left: 0;
   top: 0;
@@ -9777,6 +9777,9 @@ hr.th-skill-border-2 {
 
 .th-logo {
   width: 150px;
+}
+.th-logo img {
+  max-width: 100%;
 }
 
 /*----------------------------------------*/

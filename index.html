@@ -4,1498 +4,1105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It's_Sanjog</title>
-
-    <!-- fav logo -->
-    <link rel="shortcut icon" href="assets/img/logo/th-fav-icon.png" type="image/x-icon">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- magnific-popup css -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- swiper-bundle -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- nice-select -->
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <!-- aos -->
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
-    <!-- odometer -->
-    <link rel="stylesheet" href="assets/css/odometer-theme-default.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sanjog Godar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-        </svg>
-        <h5 class="preloader-text">Sanzog </h5>
-    </div>
-    <!-- =========== header area start =========== -->
-    <header class="th-header-area th-header-sticky">
-        <div class="th-header-wrapper">
-            <div class="th-logo-menu-area">
-                <div class="th-logo">
-                    <a href="index.html"><img src="assets/img/logo/th-logo-white.png" alt=""></a>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 glass-card z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold gradient-text">
+                    <span class="text-3xl">&lt;</span>DEV<span class="text-3xl">/&gt;</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
-                <div class="th-main-menu">
-                    <nav class="th-mobile-menu-active">
-                        <ul>
-                            <li class="has-dropdown">
-                                <a href="#">HOME <span class="menu-dwn-arrow"><i
-                                            class="fa-regular fa-angle-down"></i></span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home-01</a></li>
-                                    <li><a href="index-2.html">Home-02</a></li>
-                                    <li><a href="index-3.html">Home-03</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">ABOUT ME</a></li>
-                            <li class="has-dropdown"><a href="#">PAGES <span class="menu-dwn-arrow"><i
-                                            class="fa-regular fa-angle-down"></i></span></a>
-
-                                <ul class="sub-menu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="service-details.html">Service Details</a></li>
-                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                </ul>
-
-                            </li>
-                            <li class="has-dropdown"><a href="#">PROJRCTS <span class="menu-dwn-arrow"><i
-                                            class="fa-regular fa-angle-down"></i></span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown"><a href="#">BLOG <span class="menu-dwn-arrow"><i
-                                            class="fa-regular fa-angle-down"></i></span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-classic.html">Blog Classic</a></li>
-                                    <li><a href="blog.html">Blog </a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown"><a href="contact.html">CONTACT US</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-            <div class="th-header-top-btn-flex">
-                <!-- header btn -->
-                <div class="th-header-btn">
-                    <a href="contact.html" class="th-primary-btn th-primary-btn-secondary2">
-                        <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png" alt=""></span>
-                        <span class="th-text th-upper">Hire Me now</span>
-                    </a>
-                </div>
-                <!-- action btn -->
-                <div class="th-header-action-item">
-                    <a href="#" class="th-menu-btn th-offcanvas-toggle">MENU <span><img
-                                src="assets/img/icon/th-menu.svg" alt=""></span></a>
-                </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-cyan-400">Home</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-cyan-400">About</a>
+                <a href="#experience" class="block py-2 text-gray-300 hover:text-cyan-400">Experience</a>
+                <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+                <a href="#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Skills</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-cyan-400">Contact</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- MouseCursor Start -->
-    <div class="mouseCursor cursor-outer"></div>
-    <div class="mouseCursor cursor-inner"></div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+        style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="particles" id="particles"></div>
 
-
-    <!-- offcanvas menu start -->
-    <div class="th-offcanvas">
-        <div class="th-offcanvas-wrapper">
-            <div class="th-offcanvas-header d-flex justify-content-between align-items-center mb-50">
-                <div class="th-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/th-block-black1.1.png" alt=""></a>
-                </div>
-                <div class="th-offcanvas-close">
-                    <button class="th-offcanvas-close-toggle"><i class="fa-regular fa-xmark"></i></button>
-                </div>
-            </div>
-
-            <div class="th-offcanvas-menu d-xl-none mb-40">
-                <nav></nav>
-            </div>
-
-            <div class="th-offcanvas-content mb-40">
-                <h2 class="th-offcanvas-title">Hello There</h2>
-                <p class="th-offcanvas-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-
-            <div class="th-offcanvas-gallery mb-40">
-                <a class="popup-image" href="assets/img/devceloper/th-blog-thumb2.1.png"><img class="w-100"
-                        src="assets/img/devceloper/th-blog-thumb2.1.png" alt=""></a>
-
-                <a class="popup-image" href="assets/img/devceloper/th-blog-thumb2.2.png"><img class="w-100"
-                        src="assets/img/devceloper/th-blog-thumb2.2.png" alt=""></a>
-
-                <a class="popup-image" href="assets/img/devceloper/th-blog-thumb2.1.png"><img class="w-100"
-                        src="assets/img/devceloper/th-blog-thumb2.1.png" alt=""></a>
-
-                <a class="popup-image" href="assets/img/devceloper/th-blog-thumb2.2.png"><img class="w-100"
-                        src="assets/img/devceloper/th-blog-thumb2.2.png" alt=""></a>
-            </div>
-
-
-
-            <div class="th-offcanvas-info mb-30">
-                <h3 class="th-offcanvas-title mb-20">Contact Us</h3>
-                <a href="#">+977 9806514021</a>
-                <a href="#">sanjog.godar2058@gmail.com</a>
-                <a href="#">Pokhara, Nepal</a>
-            </div>
-
-            <div class="th-offcanvas-social mb-30">
-                <h3 class="th-offcanvas-title mb-20">Follow Us</h3>
-                <a href="https://www.facebook.com/tsanzog"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://github.com/Sanjog-Godar"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/sanjog-godar"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="th-offcanvas-overlay"></div>
-    <!-- offcanvas menu end -->
-
-
-    <!-- =========== header area end =========== -->
-
-    <main class="th-designer-bg parallaxie" style="background-image: url(./assets/img/designer/th-designer-bg.png);">
-        <!-- =========== banner area start =========== -->
-        <div class="p-relative">
-            <div class="th-banner-area th-banner-area-1 fix p-relative"
-                style="background-image: url(/assets/img/designer/th-banenr-bg.png);">
-                <div class="container-fluid">
-                    <div class="th-banner-content-wrapper">
-                        <div class="row">
-                            <div class="col-xl-9 col-lg-7">
-                                <!-- th banner content -->
-                                <div class="th-banner-content p-relative z-index-1">
-                                    <p class="th-subtitle">Hey Hi! Sanjog Godar 👋 </p>
-                                    <!-- th title -->
-                                    <h1 class="th-title th-upper text-anime-style-1">I am Creative
-                                    </h1>
-                                    <div class="th-arrow-hero">
-                                        <a href="#"><span class="th-arrow-right"><img
-                                                    src="assets/img/icon/th-arrow-right.svg" alt=""></span></a>
-                                        <h2 class="th-title2 th-upper text-anime-style-1"> Full Stack Developer</h2>
-                                    </div>
-                                    <!-- th button area -->
-                                    <div class="th-banner-btn-wrap mb-72 mt-48">
-                                        <!-- primary btn -->
-                                        <a href="contact.html" class="th-primary-btn" data-aos="fade-up">
-                                            <span class="th-icon"><img src="assets/img/icon/download.png" alt=""></span>
-                                            <span class="th-text">DOWNLOAD CV</span>
-                                        </a>
-
-                                        <!-- primary btn -->
-                                        <a href="contact.html" class="th-primary-btn th-primary-btn-secondary"
-                                            data-aos="fade-up">
-                                            <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png"
-                                                    alt=""></span>
-                                            <span class="th-text">CONTACT ME</span>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-9">
-                                            <div class="th-auth-boxflex">
-                                                <div class="th-auth-ratingbox" data-aos="fade-up">
-                                                    <h2 class="title"><span class="count">4.9</span></h2>
-                                                    <div class="th-star">
-                                                        <ul>
-                                                            <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                                            <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                                            <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                                            <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                                            <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="th-authbox" data-aos="fade-up">
-                                                    <!-- th authbox flex -->
-                                                    <div class="th-authbox-flex mb-24">
-                                                        <div class="th-thumb">
-                                                            <img src="assets/img/designer/th-founder1.1.png" alt="">
-                                                        </div>
-                                                        <div class="th-content">
-                                                            <h3 class="th-title">Marco Brown</h3>
-                                                            <p class="th-para">CEO, Founder</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="th-desc">Duis aute irure dolor in reprehenderit in
-                                                        voluptate
-                                                        esse cillum, dolore fugiat nulla pariatur. excepteur sint
-                                                        occaecat
-                                                        cupidatat</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-lg-5">
-                                <div class="p-relative z-index-1">
-                                    <div class="th-circle-txt-wrap d-none d-xl-block" data-aos="fade-up">
-                                        <img class="circle" src="assets/img/designer/th-circle-text.png" alt="">
-                                        <div class="th-icontext">
-                                            <img src="assets/img/designer/th-icon-text.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="p-relative">
-                                        <div class="th-hero-right-thumb d-none d-xl-block" data-aos="fade-up">
-                                            <img class="w-100" src="assets/img/designer/th-hero-thumb1.1.png" alt="">
-                                            <div class="th-rotate-text p-relative">
-                                                <p class="th-scroll-dwn-text th-upper"><a href="#about">Scroll Down
-                                                        <span><img src="assets/img/icon/th-dwn-arrow.png"
-                                                                alt=""></span></a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- =========== banner area end =========== -->
-                <div class="th-brand-height-214 fix">
-                    <div class="tp-brand-area tp-brand-area-1 th-gray-bg pt-40 pb-40">
-                        <div class="tp-brand-wrapper">
-                            <div class="swiper tp-brand-top-active">
-                                <div class="swiper-wrapper tp-slide-transtion">
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.5.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.5.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/brand/th-star2.1.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand-2.5.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tp-brand-area tp-brand-area-2 th-black-bg pt-40 pb-40">
-                        <div class="tp-brand-wrapper">
-                            <div dir="rtl" class="swiper tp-brand-bottom-active">
-                                <div class="swiper-wrapper tp-slide-transtion">
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.1.png" alt="">
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.4.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.5.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.4.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.5.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.2.png"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide tp-brand-slide-element">
-                                        <div class="tp-brand-img">
-                                            <span class="th-icn-1"><img src="assets/img/icon/th-star-1.1.svg"
-                                                    alt=""></span>
-                                            <img src="assets/img/brand/th-brand1.3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Animated Background Grid -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(rgba(0, 245, 160, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 245, 160, 0.1) 1px, transparent 1px); background-size: 50px 50px;">
             </div>
         </div>
 
-
-
-        <!-- =========== about area start =========== -->
-        <section id="about" class="th-about-area p-relative z-index-1 fix pt-120 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="th-section-title mb-48">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{ABOUT ME}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">I’m Sanjog Godar, Dedicated To <cite
-                                    class="th-sm-img"><img src="assets/img/designer/th-text-icon.png" alt=""></cite>
-                                <span>Designing Experiences</span> That Blend Beauty With Purpose.
-                            </h2>
-                        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Side - Text Content -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <div class="mb-4">
+                        <span class="text-cyan-400 text-base sm:text-lg font-mono">Hello, I'm</span>
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 sm:mb-6 leading-tight">
+                        <span class="text-white">Sanjog</span><br>
+                        <span class="gradient-text">Godar</span>
+                    </h1>
+                    <div class="text-xl sm:text-2xl lg:text-3xl mb-6 sm:mb-8 text-gray-300 font-mono">
+                        <span class="typing-effect inline-block" id="typed-text">Full Stack Developer</span>
+                    </div>
+                    <p
+                        class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0 text-gray-400 leading-relaxed">
+                        Crafting exceptional digital experiences with cutting-edge technologies.
+                        Transforming complex problems into elegant, scalable solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#about"
+                            class="gradient-bg px-6 sm:px-8 py-3 sm:py-4 rounded-full text-black font-bold text-base sm:text-lg hover:shadow-2xl hover:scale-105 transition glow">
+                            View My Work
+                        </a>
+                        <a href="#contact"
+                            class="neon-border px-6 sm:px-8 py-3 sm:py-4 rounded-full text-cyan-400 font-bold text-base sm:text-lg hover:shadow-1xl hover:scale-105 transition glow">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="mt-8 sm:mt-12 flex gap-4 sm:gap-6 justify-center lg:justify-start">
+                        <a href="https://github.com/Sanjog-Godar"
+                            class="text-gray-400 hover:text-cyan-400 transition text-xl sm:text-2xl hover:scale-110 transform">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="www.linkedin.com/in/sanjog-godar"
+                            class="text-gray-400 hover:text-cyan-400 transition text-xl sm:text-2xl hover:scale-110 transform">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/tsanzog"
+                            class="text-gray-400 hover:text-cyan-400 transition text-xl sm:text-2xl hover:scale-110 transform">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="mailto:Sanjog.godar2058@gmail.com"
+                            class="text-gray-400 hover:text-cyan-400 transition text-xl sm:text-2xl hover:scale-110 transform">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="p-relative mb-30">
-                            <h2 class="th-exp-title"><span class="count">15</span></h2>
-                            <p class="th-exp-box">
-                                Years of Experience
-                            </p>
 
-
-                        </div>
-
-                        <div class="th-exp-grop-flex">
-                            <div class="th-exp-grop-flex-thumb">
-                                <img src="assets/img/designer/th-ex-group-thumb.png" alt="">
+                <!-- Right Side - Image -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative floating w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80">
+                        <div class="absolute inset-0 gradient-bg opacity-20 blur-3xl rounded-3xl"></div>
+                        <div class="relative overflow-hidden rounded-3xl neon-border glow" style="aspect-ratio: 9/16;">
+                            <img src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767021513/developer_l80iq8.jpg"
+                                alt="Developer Profile"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
                             </div>
-                            <div class="th-exp-grop-flex-content">
-                                <h3 class="title">(Trusted by industry leaders)</h3>
-                                <div class="th-exp-box-review">
-                                    <ul>
-                                        <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                        <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                        <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                        <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                        <li><img src="assets/img/icon/th-star.png" alt=""></li>
-                                    </ul>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                                <div class="flex gap-2 flex-wrap">
+                                    <span
+                                        class="px-2 sm:px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-xs font-mono">Available</span>
+                                    <span
+                                        class="px-2 sm:px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-xs font-mono">Remote</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-8">
-                        <!-- th about boc content -->
-                        <div class="th-about-box-wrap mb-30">
-                            <!-- th section desc -->
-                            <div class="th-section-title pb-32">
-                                <p class="para">I'm a full‑stack web and mobile developer from Pokhara, Nepal. I work mainly with Flutter,
+                </div>
+            </div>
+
+            <div class="text-center mt-12 sm:mt-20 scroll-indicator">
+                <a href="#about" class="text-cyan-400 text-2xl sm:text-3xl animate-bounce inline-block">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section py-12 sm:py-16 lg:py-20" style="background: #0a0a0a;">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-cyan-400 text-xs sm:text-sm font-mono uppercase tracking-widest">Get To Know</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mt-2">About <span
+                        class="gradient-text">Me</span></h2>
+                <div class="w-16 sm:w-24 h-1 gradient-bg mx-auto mt-4 sm:mt-6 rounded-full glow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
+                <!-- Developer Image with 9:16 ratio -->
+                <div class="lg:col-span-2 flex justify-center">
+                    <div class="w-full max-w-sm lg:sticky lg:top-24">
+                        <div class="relative overflow-hidden rounded-3xl neon-border glow" style="aspect-ratio: 9/16;">
+                            <img src="https://res.cloudinary.com/dlevkebqx/image/upload/v1767508552/1767505873962-019b878f-0cea-7a88-a89e-6282fc8c7ef1_auutka.png"
+                                alt="Developer Profile"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8">
+                                <h3 class="text-white text-xl sm:text-2xl lg:text-3xl font-black mb-2 gradient-text">
+                                    Elite Developer</h3>
+                                <p class="text-cyan-400 text-base sm:text-lg font-mono">Full Stack Engineer</p>
+                                <div class="mt-3 sm:mt-4 flex gap-2 flex-wrap">
+                                    <span
+                                        class="px-2 sm:px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-xs font-mono">Available</span>
+                                    <span
+                                        class="px-2 sm:px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-xs font-mono">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links below image -->
+                        <div class="flex justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+
+                            <a href="https://github.com/Sanjog-Godar"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 hover:text-cyan-300 transition hover:scale-110">
+                                <i class="fab fa-github text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="www.linkedin.com/in/sanjog-godar"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 hover:text-cyan-300 transition hover:scale-110">
+                                <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/tsanzog"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 hover:text-cyan-300 transition hover:scale-110">
+                                <i class="fa-brands fa-facebook text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="mailto:Sanjog.godar2058@gmail.com"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400/20 hover:text-cyan-300 transition hover:scale-110">
+                                <i class="fas fa-envelope text-lg sm:text-xl"></i>
+                            </a>
+                        </div>
+
+                        <!-- Download CV Button -->
+                        <a href="https://drive.google.com/uc?export=download&id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w"
+                            id="download-cv-about"
+                            class="mt-4 sm:mt-6 w-full gradient-bg px-4 sm:px-6 py-3 sm:py-4 rounded-xl text-black font-bold text-sm sm:text-base text-center block hover:shadow-2xl hover:scale-105 transition glow">
+                            <i class="fas fa-download mr-2"></i>Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Details Section -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-4 sm:mb-6 text-white">Professional <span
+                            class="gradient-text">Summary</span></h3>
+                    <p class="text-gray-400 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base lg:text-lg">
+                        I'm a full‑stack web and mobile developer from Pokhara, Nepal. I work mainly with Flutter,
                         Next.js,
                         Laravel, Firebase/Supabase, and trading tools like Pine Script and MQL5. I enjoy taking an idea,
-                        turning it into a working app, and then improving it step by step. I studied BSc.CSIT at Tribhuvan University and have worked with Websoft Technology Nepal Pvt.
+                        turning it into a working app, and then improving it step by step.
+                    </p>
+                    <p class="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg">
+                        I studied BSc.CSIT at Tribhuvan University and have worked with Websoft Technology Nepal Pvt.
                         Ltd.. Now I’m focused on client work and my own projects, including apps on the Google Play
-                        Store and new web apps I’m building for my portfolio. I like clean, readable code and straightforward communication. If something isn’t clear, I’d
+                        Store and new web apps I’m building for my portfolio.
+                    </p>
+                    <p class="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg">
+                        I like clean, readable code and straightforward communication. If something isn’t clear, I’d
                         rather ask a few extra questions than guess. My goal is to build things that are actually
-                        useful, not just good on paper. sanjog.godar2058@gmail.com English, Nepali,
-                                        Hindi Building responsive and scalable web
-                                        applications with modern frameworks Creating cross-platform mobile solutions
-                                        that users love Designing robust, secure server-side
-                                        architectures Crafting precise, rule-based trading
+                        useful, not just good on paper.
+                    </p>
+
+                    <!-- Personal Details Grid -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 neon-border">
+                        <h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-user-circle mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            Personal Information
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-signature text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Full Name
+                                    </p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">Sanjog Godar</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-envelope text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Email</p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg break-all">
+                                        sanjog.godar2058@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-phone text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Phone</p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">+977 9806514021
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Location
+                                    </p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">Pokhara, Nepal
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-briefcase text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Experience
+                                    </p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">1+ Years</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-graduation-cap text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Education
+                                    </p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">B.Sc CSIT</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-language text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Languages
+                                    </p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">English, Nepali,
+                                        Hindi</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-globe text-cyan-400 mr-2 sm:mr-3 mt-1 text-base sm:text-lg lg:text-xl flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-cyan-300 text-xs sm:text-sm mb-1 font-mono font-semibold">Website</p>
+                                    <p class="font-semibold text-white text-sm sm:text-base lg:text-lg">elitedev.io</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I Do -->
+                    <div>
+                        <h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-rocket mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            What I Do
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            <div
+                                class="flex items-start glass-card p-4 sm:p-5 lg:p-6 rounded-xl hover:neon-border transition">
+                                <i
+                                    class="fas fa-code text-cyan-400 text-2xl sm:text-3xl mr-3 sm:mr-4 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h5 class="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">Web
+                                        Development</h5>
+                                    <p class="text-xs sm:text-sm text-gray-400">Building responsive and scalable web
+                                        applications with modern frameworks</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start glass-card p-4 sm:p-5 lg:p-6 rounded-xl hover:neon-border transition">
+                                <i
+                                    class="fas fa-mobile-alt text-cyan-400 text-2xl sm:text-3xl mr-3 sm:mr-4 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h5 class="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">Mobile
+                                        Apps</h5>
+                                    <p class="text-xs sm:text-sm text-gray-400">Creating cross-platform mobile solutions
+                                        that users love</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start glass-card p-4 sm:p-5 lg:p-6 rounded-xl hover:neon-border transition">
+                                <i
+                                    class="fas fa-database text-cyan-400 text-2xl sm:text-3xl mr-3 sm:mr-4 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h5 class="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
+                                        Backend Development</h5>
+                                    <p class="text-xs sm:text-sm text-gray-400">Designing robust, secure server-side
+                                        architectures</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start glass-card p-4 sm:p-5 lg:p-6 rounded-xl hover:neon-border transition">
+                                <i
+                                    class="fa-solid fa-chart-area text-cyan-400 text-2xl sm:text-3xl mr-3 sm:mr-4 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h5 class="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
+                                        Trading Automation
+                                    </h5>
+                                    <p class="text-xs sm:text-sm text-gray-400">Crafting precise, rule-based trading
                                         tools for TradingView and MetaTrader 5</p>
-                            </div>
-
-                            <div class="th-circle-box-grid">
-                                <!-- th single box -->
-                                <div class="th-circle-box-grid-singlebox" data-aos="fade-up">
-                                    <div class="th-icon pb-16">
-                                        <span><img src="assets/img/icon/th-down-arrow.png" alt=""></span>
-                                    </div>
-                                    <div class="th-content">
-                                        <h3 class="title"><a href="#">Full Stack Developer</a></h3>
-                                    </div>
-                                </div>
-                                <!-- th single box -->
-                                <div class="th-circle-box-grid-singlebox" data-aos="fade-up">
-                                    <div class="th-icon pb-16">
-                                        <span><img src="assets/img/icon/th-down-arrow.png" alt=""></span>
-                                    </div>
-                                    <div class="th-content">
-                                        <h3 class="title"><a href="#">Prototyping</a></h3>
-                                    </div>
-                                </div>
-                                <!-- th single box -->
-                                <div class="th-circle-box-grid-singlebox" data-aos="fade-up">
-                                    <div class="th-icon pb-16">
-                                        <span><img src="assets/img/icon/th-down-arrow.png" alt=""></span>
-                                    </div>
-                                    <div class="th-content">
-                                        <h3 class="title"><a href="#">Interaction Design</a></h3>
-                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- =========== about area end =========== -->
+        </div>
+    </section>
 
-        <!-- =========== service area start =========== -->
-        <section class="th-service-area fix parallaxie pt-120 pb-90"
-            style="background-image: url(./assets/img/designer/th-service-bg.png);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 mx-auto text-center">
-                        <div class="th-section-title mb-48">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{OUR SERVICES}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">Where Expertise Shapes <span>Experiences</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-8 col-md-7 mb-30">
-                        <!-- th service thumb -->
-                        <div class="th-serviceboxwrap p-relative">
-                            <div class="th-service-thumb reveal image-anime">
-                                <img class="w-100" src="assets/img/designer/th-service-thumb1.1.png" alt="">
-                            </div>
-                            <div class="th-numbox">
-                                <span class="th-num">01</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-5 mb-30">
-                        <!-- th service box -->
-                        <div class="th-service-iconbox" data-aos="fade-left">
-                            <!-- th icon -->
-                            <span class="th-icon mb-24">
-                                <img src="assets/img/icon/th-service-icon1.1.svg" alt="">
-                            </span>
-                            <h3 class="th-title pb-12"><a href="service-details.html">Full Stack Developer</a></h3>
-                            <p class="th-desc">I design intuitive, user-friendly interfaces that merge creativity with
-                                functionality.</p>
-                            <a href="#" class="th-more-btn mt-40">Explore Our Services</a>
-                        </div>
-                    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="section py-12 sm:py-16 lg:py-20" style="background: #0a0a0a;">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-cyan-400 text-xs sm:text-sm font-mono uppercase tracking-widest">My Journey</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mt-2">Work <span
+                        class="gradient-text">Experience</span></h2>
+                <div class="w-16 sm:w-24 h-1 gradient-bg mx-auto mt-4 sm:mt-6 rounded-full glow"></div>
+            </div>
 
-                    <div class="col-xl-4 col-md-5 mb-30">
-                        <!-- th service box -->
-                        <div class="th-service-iconbox" data-aos="fade-right">
-                            <!-- th icon -->
-                            <span class="th-icon mb-24">
-                                <img src="assets/img/icon/th-service-icon1.1.svg" alt="">
-                            </span>
-                            <h3 class="th-title pb-12"><a href="service-details.html">Prototyping & Wireframing</a></h3>
-                            <p class="th-desc">Rapid prototyping and detailed wireframes to visualize your product.</p>
-                            <a href="#" class="th-more-btn mt-40">Explore Our Services</a>
+            <div class="max-w-5xl mx-auto">
+                <div class="relative border-l-2 border-cyan-400/30 ml-4 sm:ml-6">
+                    <!-- Experience Item 1 -->
+                    <div class="mb-8 sm:mb-10 lg:mb-12 ml-6 sm:ml-8 lg:ml-10 timeline-item relative">
+                        <div
+                            class="absolute -left-9 sm:-left-11 lg:-left-13 top-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg glow">
                         </div>
-                    </div>
-                    <div class="col-xl-8 col-md-7 mb-30">
-                        <!-- th service thumb -->
-                        <div class="th-serviceboxwrap p-relative">
-                            <div class="th-service-thumb reveal image-anime">
-                                <img class="w-100" src="assets/img/designer/th-service-thumb1.2.png" alt="">
-                            </div>
-                            <div class="th-numbox">
-                                <span class="th-num th-num-2">02</span>
+                        <div
+                            class="glass-card neon-border p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-[1.02] transition">
+                            <span
+                                class="text-xs sm:text-sm font-bold gradient-text font-mono uppercase tracking-wider">2025
+                                - Present</span>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-2 sm:mt-3">Mobile
+                                Application Developer</h3>
+                            <p class="text-cyan-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Websoft
+                                Technology Nepal Pvt Ltd.
+                            </p>
+                            <ul class="text-gray-400 space-y-2 text-sm sm:text-base">
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Worked
+                                        on Flutter‑based Android apps for client projects</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Built
+                                        new screens and features, and connected apps to REST APIs and Firebase</span>
+                                </li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Helped
+                                        to fix bugs, improve performance, and polish the UI before releases</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Collaborated
+                                        with designers and backend developers to ship updates on time</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4 sm:mt-5">
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Flutter</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Dart</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Rest
+                                    API</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-xl-8 col-md-7 mb-30">
-                        <!-- th service thumb -->
-                        <div class="th-serviceboxwrap p-relative">
-                            <div class="th-service-thumb reveal image-anime">
-                                <img class="w-100" src="assets/img/designer/th-service-thumb1.3.png" alt="">
-                            </div>
-                            <div class="th-numbox">
-                                <span class="th-num">03</span>
+                    <!-- Experience Item 2 -->
+                    <!-- <div class="mb-8 sm:mb-10 lg:mb-12 ml-6 sm:ml-8 lg:ml-10 timeline-item relative">
+                        <div
+                            class="absolute -left-9 sm:-left-11 lg:-left-13 top-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg glow">
+                        </div>
+                        <div
+                            class="glass-card neon-border p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-[1.02] transition">
+                            <span
+                                class="text-xs sm:text-sm font-bold gradient-text font-mono uppercase tracking-wider">2019
+                                - 2021</span>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-2 sm:mt-3">Full Stack
+                                Developer</h3>
+                            <p class="text-cyan-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Digital
+                                Solutions Ltd.</p>
+                            <ul class="text-gray-400 space-y-2 text-sm sm:text-base">
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Developed
+                                        responsive web applications using modern frameworks</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Optimized
+                                        database queries improving performance by 40%</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Integrated
+                                        third-party APIs and payment gateways</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Participated
+                                        in agile development processes</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4 sm:mt-5">
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Vue.js</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Python</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">MongoDB</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-5 mb-30">
-                        <!-- th service box -->
-                        <div class="th-service-iconbox" data-aos="fade-left">
-                            <!-- th icon -->
-                            <span class="th-icon mb-24">
-                                <img src="assets/img/icon/th-service-icon1.1.svg" alt="">
-                            </span>
-                            <h3 class="th-title pb-12"><a href="service-details.html">Responsive & Mobile Design</a>
-                            </h3>
-                            <p class="th-desc">I design intuitive, user-friendly interfaces that merge creativity with
-                                functionality.</p>
-                            <a href="#" class="th-more-btn mt-40">Explore Our Services</a>
+                    </div> -->
+
+                    <!-- Experience Item 3 -->
+                    <!-- <div class="mb-8 sm:mb-10 lg:mb-12 ml-6 sm:ml-8 lg:ml-10 timeline-item relative">
+                        <div
+                            class="absolute -left-9 sm:-left-11 lg:-left-13 top-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg glow">
+                        </div>
+                        <div
+                            class="glass-card neon-border p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-[1.02] transition">
+                            <span
+                                class="text-xs sm:text-sm font-bold gradient-text font-mono uppercase tracking-wider">2018
+                                - 2019</span>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-2 sm:mt-3">Junior Web
+                                Developer</h3>
+                            <p class="text-cyan-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">StartUp
+                                Ventures</p>
+                            <ul class="text-gray-400 space-y-2 text-sm sm:text-base">
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Built
+                                        and maintained company website and internal tools</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Collaborated
+                                        with design team to implement UI/UX improvements</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Fixed
+                                        bugs and improved application performance</span></li>
+                                <li class="flex items-start"><i
+                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Learned
+                                        best practices in web development</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4 sm:mt-5">
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">HTML/CSS</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">JavaScript</span>
+                                <span
+                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">PHP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- =========== service area end =========== -->
+        </div> -->
+    </section>
 
-        <!-- =========== skill area start =========== -->
-        <section class="th-skill-area fix pt-120 pb-90">
-            <div class="container">
-                <div class="row align-items-end">
-                    <div class="col-xl-6 col-md-7">
-                        <div class="th-section-title mb-30">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{MY SKILLS}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">The Skills Behind <span>My Work</span></h2>
+    <!-- Projects Section -->
+    <section id="projects" class="section py-12 sm:py-16 lg:py-20"
+        style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-cyan-400 text-xs sm:text-sm font-mono uppercase tracking-widest">Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mt-2">Featured <span
+                        class="gradient-text">Projects</span></h2>
+                <div class="w-16 sm:w-24 h-1 gradient-bg mx-auto mt-4 sm:mt-6 rounded-full glow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Project 1 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden flex justify-center items-center">
+    <img src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767091459/1_p28sbe.png" 
+         alt="Project 1"
+         class="project-image h-48 sm:h-56">
+</div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">Maps for Clash App
+                        </h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            A full-featured clash of clans base copy application along with various features like global
+                            chat system.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Flutter</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Dart</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Supabase</span><span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Firebase</span>
                         </div>
-                    </div>
-
-                    <div class="col-xl-6 col-md-5">
-                        <div class="th-skil-btn-2" data-aos="fade-up">
-                            <a href="contact.html" class="th-primary-btn th-primary-btn-secondary2 mb-30">
-                                <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png" alt=""></span>
-                                <span class="th-text th-upper">Hire Me now</span>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.sanjog.clash_of_bases"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
-                <hr class="th-skill-border">
-                <div class="row gx-0 gx-md-4">
-                    <div class="col-xl-3 col-md-6 mb-30">
-                        <!-- single counter -->
-                        <div class="th-single-counter th-counter-mt-160" data-aos="fade-up">
-                            <div class="th-icon">
-                                <span><img src="assets/img/icon/th-logo1.1.png" alt=""></span>
-                            </div>
-                            <div class="th-counter-numflex">
-                                <div class="th-content">
-                                    <h3 class="th-nun"><span class="count">94</span> %</h3>
-                                </div>
-                                <p class="th-para">Framer Design</p>
-                            </div>
-                        </div>
+
+                <!-- Project 2 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://res.cloudinary.com/dlevkebqx/image/upload/v1768663955/pngtree-big-isolated-vehicle-vector-colorful-icons-flat-illustrations-of-delivery-by-png-image_7255237_kmleud.jpg" alt="Project 2"
+                            class="project-image w-full h-48 sm:h-56">
                     </div>
-                    <div class="col-xl-3 col-md-6 mb-30">
-                        <!-- single counter -->
-                        <div class="th-single-counter" data-aos="fade-up">
-                            <div class="th-icon">
-                                <span><img src="assets/img/icon/th-logo1.2.png" alt=""></span>
-                            </div>
-                            <div class="th-counter-numflex">
-                                <div class="th-content">
-                                    <h3 class="th-nun"><span class="count">99</span>%</h3>
-                                </div>
-                                <p class="th-para">Figma Design</p>
-                            </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">Vehicle Attendance & Fuel Tracking</h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            A responsive Next.js dashboard for daily vehicle attendance, kilometer tracking, and fuel bill calculation for a Jeep driver.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Next.Js</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Typescript</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Supabase</span>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mb-30">
-                        <!-- single counter -->
-                        <div class="th-single-counter th-counter-mt-160" data-aos="fade-up">
-                            <div class="th-icon">
-                                <span><img src="assets/img/icon/th-logo1.1.png" alt=""></span>
-                            </div>
-                            <div class="th-counter-numflex">
-                                <div class="th-content">
-                                    <h3 class="th-nun"><span class="count">94</span>%</h3> 
-                                </div>
-                                <p class="th-para">Framer Design</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mb-30">
-                        <!-- single counter -->
-                        <div class="th-single-counter" data-aos="fade-up">
-                            <div class="th-icon">
-                                <span><img src="assets/img/icon/th-logo1.3.png" alt=""></span>
-                            </div>
-                            <div class="th-counter-numflex">
-                                <div class="th-content">
-                                    <h3 class="th-nun"><span class="count">93</span>%</h3>
-                                </div>
-                                <p class="th-para">Adobe_XD</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="p-relative" data-aos="fade-up">
-                    <h2 class="th-work-absolute-title">WORKS</h2>
-                </div>
-            </div>
-            <div class="swiper th-work-Swiper" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.1.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.2.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.3.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.4.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.3.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.1.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide th-portfolio-slide-wrapper">
-                        <div class="th-portfolio-slide-img image-anime ">
-                            <img class="w-100" src="assets/img/designer/th-work-thumb1.2.png" alt="Slide 1">
-                        </div>
-                        <div class="th-portfolio-content mt-16 d-flex justify-content-between align-items-center">
-                            <div class="th-portfolio-text">
-                                <p class="th-para"> <span><img src="assets/img/icon/th-work-subtitle-icon.png"
-                                            alt=""></span>Web Application</p>
-                                <h3 class="th-title"><a href="portfolio.html">Maps for Clash App</a></h3>
-                            </div>
-                            <div class="th-portfolio-link">
-                                <a class='th-portfolio-icon' href='portfolio.html'>
-                                    <img src="assets/img/icon/th-work-arrow1.1.png" alt="icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- =========== skill area end =========== -->
-
-        <!--================= award section Start =================-->
-        <section class="th-award-bg pt-120 pb-90 parallaxie"
-            style="background-image: url(./assets/img/designer/th-award1.1.png);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 mb-30">
-                        <div class="th-award-title">
-                            <div class="th-section-title mb-48">
-                                <!-- th section subtitle -->
-                                <p class="sub-title mb-16" data-aos="fade-up">{Award Winning}</p>
-                                <!-- th section title -->
-                                <h2 class="title text-anime-style-2">Creative UI/UX <span>Achievement</span></h2>
-                            </div>
-
-                            <div class="tharard-thumb-wrap text-center p-relative">
-                                <div class="thaward-main-thumb">
-                                    <img src="assets/img/designer/thaward-thumb1.1.png" alt="">
-                                </div>
-                                <!-- shape 1 -->
-                                <div class="th-award-thumbshape1 aniamtion-key-1 d-none d-xl-block">
-                                    <img src="assets/img/designer/awardshape.png" alt="">
-                                </div>
-                                <!-- shape 2 -->
-                                <div class="th-award-thumbshape2 aniamtion-key-5 d-none d-xl-block">
-                                    <img src="assets/img/designer/text-shape1.1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 mb-30">
-                        <div class="th-award-items-flex p-relative" data-aos="fade-up">
-                            <!-- content -->
-                            <div class="th-awaard-content-wrap">
-                                <h3 class="th-title"><a href="#">Awwwards SOTD</a></h3>
-                                <p class="th-para">Interview - 202</p>
-                            </div>
-                            <!-- icon -->
-                            <div class="th-award-icon">
-                                <a href="#"><span><img src="assets/img/designer/award-arrow.png" alt=""></span></a>
-                            </div>
-                            <!-- shape -->
-                            <div class="th-award-right-arrow">
-                                <img src="assets/img/designer/arrow-right-aa.png" alt="">
-                            </div>
-                        </div>
-
-                        <div class="th-award-items-flex p-relative">
-                            <!-- content -->
-                            <div class="th-awaard-content-wrap">
-                                <h3 class="th-title"><a href="#">Awwwards SOTD</a></h3>
-                                <p class="th-para">For Desplay - 2024</p>
-                            </div>
-                            <!-- icon -->
-                            <div class="th-award-icon">
-                                <a href="#"><span><img src="assets/img/designer/award-arrow.png" alt=""></span></a>
-                            </div>
-                            <!-- shape -->
-                            <div class="th-award-right-arrow">
-                                <img src="assets/img/designer/arrow-right-aa.png" alt="">
-                            </div>
-                        </div>
-
-                        <div class="th-award-items-flex p-relative">
-                            <!-- content -->
-                            <div class="th-awaard-content-wrap">
-                                <h3 class="th-title"><a href="#">Awwwards SOTD</a></h3>
-                                <p class="th-para">Grateful for diversity -2025</p>
-                            </div>
-                            <!-- icon -->
-                            <div class="th-award-icon">
-                                <a href="#"><span><img src="assets/img/designer/award-arrow.png" alt=""></span></a>
-                            </div>
-                            <!-- shape -->
-                            <div class="th-award-right-arrow">
-                                <img src="assets/img/designer/arrow-right-aa.png" alt="">
-                            </div>
-                        </div>
-
-                        <div class="th-award-items-flex p-relative">
-                            <!-- content -->
-                            <div class="th-awaard-content-wrap">
-                                <h3 class="th-title"><a href="#">CSS Design Awards</a></h3>
-                                <p class="th-para">Lost in dance - 2026</p>
-                            </div>
-                            <!-- icon -->
-                            <div class="th-award-icon">
-                                <a href="#"><span><img src="assets/img/designer/award-arrow.png" alt=""></span></a>
-                            </div>
-                            <!-- shape -->
-                            <div class="th-award-right-arrow">
-                                <img src="assets/img/designer/arrow-right-aa.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================= award section End =================-->
-
-        <!-- =========== testimonial area start =========== -->
-        <section class="th-skill-area fix pt-120 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-md-7 mx-auto text-center">
-                        <div class="th-section-title mb-48">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{Client Stories}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">Reviews & <span>Testimonials</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <hr class="th-skill-border">
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="p-relative" data-aos="fade-up">
-                            <div class="swiper th-project-active-margin thtestimonialactive1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title"><a href="testimonial.html">Daniel Khan</a></h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title"><a href="testimonial.html">Daniel Khan</a></h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title"><a href="testimonial.html">Daniel Khan</a></h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title"><a href="testimonial.html">Daniel Khan</a></h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title"><a href="testimonial.html">Daniel Khan</a></h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- navigation -->
-                                <div class="th-control-pagination">
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-9 d-none d-lg-block mx-auto">
-                        <div class="th-slider-arrow-control">
-                            <div class="swiper-pagination"></div>
-                            <div class="th-testimonial-navigation">
-                                <div class="th-testimonial-navigation-next th-testimonial-navigation-button"><span><img
-                                            src="assets/img/icon/th-arrow-right.png" alt=""></span></div>
-                                <div class="th-testimonial-navigation-prev th-testimonial-navigation-button"><span><img
-                                            src="assets/img/icon/th-arrow-left.png" alt=""></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- =========== textimonial area end =========== -->
-
-
-        <!-- =========== testimonial area start =========== -->
-        <section class="th-skill-area d-none fix pt-120 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-md-7 mx-auto text-center">
-                        <div class="th-section-title mb-48">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{Client Stories}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">Reviews & <span>Testimonials</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <hr class="th-skill-border">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5 col-md-6 mb-30">
-                        <div class="th-clientbox-wrap">
-                            <!-- top box -->
-                            <div class="th-clientbox-wrap-top-content">
-                                <h3 class="th-client-tltle">4.8/5</h3>
-                                <p class="th-desc pt-8">Average rating from our clients</p>
-                            </div>
-
-                            <!-- center box -->
-                            <div class="th-clientbox-wrap-center-content">
-                                <div class="th-gthumb">
-                                    <img src="assets/img/designer/th-client-grop.png" alt="">
-                                </div>
-                                <h4 class="th-desc pt-16">Trusted By 25,880+ Worldwide <br class="d-none d-xl-block">
-                                    UI/UX & Customers</h4>
-                            </div>
-
-                            <!-- bottom box -->
-                            <div class="th-clientbox-wrap-bottom-content-btn">
-                                <a href="#" class="th-primary-btn th-primary-btn-secondary4 mb-30">
-                                    <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png"
-                                            alt=""></span>
-                                    <span class="th-text">VIEW ALL ARTICALS</span>
-                                </a>
-                            </div>
-                            <!-- shape -->
-                            <div class="th-shape">
-                                <img src="assets/img/designer/th-testimonial-shape.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7 col-md-6">
-                        <div class="p-relative">
-                            <div class="swiper tp-test-slider-space thtestimonialactive1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title">Daniel Khan</h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title">Daniel Khan</h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="th-testimonial-content-wrap">
-                                            <!-- th quote -->
-                                            <div class="th-quote">
-                                                <img src="assets/img/designer/th-quote.png" alt="">
-                                            </div>
-                                            <h3 class="th-text">They revamped our entire digital presence with an
-                                                amazing website, smart SEO, and brilliant content marketing. The impact
-                                                was immediate, resulting in increased traffic, higher engagement and
-                                                boosted </h3>
-
-                                            <div class="th-testimonial-authflex">
-                                                <div class="th-thumb">
-                                                    <img src="assets/img/designer/th-auth-flex-test.png" alt="">
-                                                </div>
-                                                <div class="th-content">
-                                                    <h3 class="th-title">Daniel Khan</h3>
-                                                    <p class="th-desc">SaaS Founder</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="th-testimonial-navigation mt-42">
-                                <div class="th-testimonial-navigation-next th-testimonial-navigation-button"><span><img
-                                            src="assets/img/icon/th-arrow-right.png" alt=""></span></div>
-                                <div class="th-testimonial-navigation-prev th-testimonial-navigation-button"><span><img
-                                            src="assets/img/icon/th-arrow-left.png" alt=""></span></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- =========== textimonial area end =========== -->
-
-        <!-- =========== skill area start =========== -->
-        <section class="th-skill-area fix pt-120 pb-90">
-            <div class="container">
-                <div class="row align-items-end">
-                    <div class="col-xl-6 col-md-7">
-                        <div class="th-section-title mb-30">
-                            <!-- th section subtitle -->
-                            <p class="sub-title mb-16" data-aos="fade-up">{MY SKILLS}</p>
-                            <!-- th section title -->
-                            <h2 class="title text-anime-style-2">The Skills Behind <span>My Work</span></h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-5">
-                        <div class="th-skil-btn-2" data-aos="fade-up">
-                            <a href="blog.html" class="th-primary-btn th-primary-btn-secondary2 mb-30">
-                                <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png" alt=""></span>
-                                <span class="th-text">VIEW ALL ARTICALS</span>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="https://vehiclemgmt.vercel.app"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/Sanjog-Godar/Automation/tree/main/Vehicle_Attendance"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fab fa-github mr-1 sm:mr-2"></i>Code
                             </a>
                         </div>
                     </div>
                 </div>
-                <hr class="th-skill-border">
-                <div class="row">
-                    <div class="col-xl-6 col-md-6 mb-30">
-                        <div class="th-skill-wrap p-relative" data-aos="fade-up">
-                            <!-- th skill thumb -->
-                            <div class="th-skill-wrap-thumb p-relative reveal image-anime p-relative">
-                                <img class="w-100" src="assets/img/designer/th-skil-bg.png" alt="">
 
-                            </div>
-                            <!-- th skill primary btn -->
-                            <div class="th-skill-btn">
-                                <a href="blog.html" class="th-primary-btn th-primary-btn-secondary3">
-                                    <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png"
-                                            alt=""></span>
-                                    <span class="th-text">VIEW ALL ARTICALS</span>
-                                </a>
-                            </div>
+                <!-- Project 3 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600" alt="Project 3"
+                            class="project-image w-full h-48 sm:h-56">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">Social Media App</h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            A modern social networking platform with real-time messaging,
+                            post sharing, and user authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">React
+                                Native</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Firebase</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Redux</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
+                            </a>
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fab fa-github mr-1 sm:mr-2"></i>Code
+                            </a>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="th-skill-box-wrap">
-                            <!-- th skill single box -->
-                            <div class="th-skill-box mb-30" data-aos="fade-up">
-                                <!-- th meta -->
-                                <div class="th-skill-box-meta">
-                                    <p class="th-date">01 Jan 2026</p>
-                                    <p class="th-tag">UI Trends 2026</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" alt="Project 4"
+                            class="project-image w-full h-48 sm:h-56">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">Project Management Tool</h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            Collaborative project management application with task tracking,
+                            team collaboration, and progress visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Angular</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Express</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">MongoDB</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
+                            </a>
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fab fa-github mr-1 sm:mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Project 5"
+                            class="project-image w-full h-48 sm:h-56">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">AI Chatbot Platform</h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            Intelligent chatbot platform with NLP capabilities,
+                            multi-language support, and integration options.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Python</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">TensorFlow</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Flask</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
+                            </a>
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fab fa-github mr-1 sm:mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="card glass-card neon-border rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600" alt="Project 6"
+                            class="project-image w-full h-48 sm:h-56">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-white">Fitness Tracking App</h3>
+                        <p class="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
+                            Mobile fitness application with workout tracking,
+                            nutrition planning, and progress analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4 sm:mb-5">
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Flutter</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Dart</span>
+                            <span
+                                class="bg-cyan-400/20 text-cyan-400 px-2 sm:px-3 py-1 rounded-full text-xs font-mono border border-cyan-400/30">Firebase</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fas fa-external-link-alt mr-1 sm:mr-2"></i>Live Demo
+                            </a>
+                            <a href="#"
+                                class="text-cyan-400 hover:text-cyan-300 font-bold text-sm sm:text-base transition">
+                                <i class="fab fa-github mr-1 sm:mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section py-12 sm:py-16 lg:py-20" style="background: #0a0a0a;">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-cyan-400 text-xs sm:text-sm font-mono uppercase tracking-widest">My Expertise</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mt-2">Technical <span
+                        class="gradient-text">Skills</span></h2>
+                <div class="w-16 sm:w-24 h-1 gradient-bg mx-auto mt-4 sm:mt-6 rounded-full glow"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <!-- Frontend Skills -->
+                    <div class="card glass-card neon-border p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                        <h3
+                            class="text-xl sm:text-2xl lg:text-3xl font-black mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-code mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            Frontend Development
+                        </h3>
+                        <div class="space-y-4 sm:space-y-5">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Next.js</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">80%</span>
                                 </div>
-                                <h3 class="th-title pt-12"><a href="blog-details.html">UX Mistakes That Reduce
-                                        Conversions And How To Avoid Them.</a></h3>
-                            </div>
-
-                            <!-- th skill single box -->
-                            <div class="th-skill-box mb-30" data-aos="fade-up">
-                                <!-- th meta -->
-                                <div class="th-skill-box-meta">
-                                    <p class="th-date">01 Jan 2026</p>
-                                    <p class="th-tag">UI Trends 2026</p>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="80%"></div>
                                 </div>
-                                <h3 class="th-title pt-12"><a href="blog-details.html">Designing Accessible Interfaces:
-                                        Inclusive Practices For All Users.</a></h3>
                             </div>
-
-                            <!-- th skill single box -->
-                            <div class="th-skill-box mb-30" data-aos="fade-up">
-                                <!-- th meta -->
-                                <div class="th-skill-box-meta">
-                                    <p class="th-date">01 Jan 2026</p>
-                                    <p class="th-tag">Visual Hierarchy</p>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Html & CSS</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">75%</span>
                                 </div>
-                                <h3 class="th-title pt-12"><a href="blog-details.html">Conducting User Research To
-                                        Create Products Users Truly Love And Use.</a></h3>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">JavaScript</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Typescript</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="card glass-card neon-border p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                        <h3
+                            class="text-xl sm:text-2xl lg:text-3xl font-black mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-server mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            Backend Development
+                        </h3>
+                        <div class="space-y-4 sm:space-y-5">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Laravel(PHP)</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">REST APIs</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">MySQL</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Supabase</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Skills -->
+                    <div class="card glass-card neon-border p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                        <h3
+                            class="text-xl sm:text-2xl lg:text-3xl font-black mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-cloud mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            Application Development & Deployment
+                        </h3>
+                        <div class="space-y-4 sm:space-y-5">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Flutter</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Firebase (Auth & DB)</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Play Console and App
+                                        Store</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Testing</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Skills -->
+                    <div class="card glass-card neon-border p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                        <h3
+                            class="text-xl sm:text-2xl lg:text-3xl font-black mb-4 sm:mb-6 text-white flex items-center">
+                            <i class="fas fa-tools mr-2 sm:mr-3 text-cyan-400 text-2xl sm:text-3xl"></i>
+                            Trading & Core Programming
+                        </h3>
+                        <div class="space-y-4 sm:space-y-5">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">MQL5</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">Pine Script</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">C</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-white text-sm sm:text-base">C++</span>
+                                    <span class="gradient-text font-bold text-sm sm:text-base">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2 sm:h-3">
+                                    <div class="skill-bar gradient-bg h-2 sm:h-3 rounded-full glow" style="width: 0%"
+                                        data-width="70%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- =========== skill area end =========== -->
-    </main>
-
-    <!-- =========== footer area start =========== -->
-    <footer class="th-footer-area fix pt-120" style="background-image: url(./assets/img/footer/th-footer-bg.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 mx-auto text-center">
-                    <div class="th-footer-btn-wrap">
-                        <!-- primary btn -->
-                        <a href="contact.html" class="th-primary-btn" data-aos="fade-up">
-                            <span class="th-icon"><img src="assets/img/icon/download.png" alt=""></span>
-                            <span class="th-text">DOWNLOAD CV</span>
-                        </a>
-
-                        <!-- primary btn -->
-                        <a href="contact.html" class="th-primary-btn th-primary-btn-secondary" data-aos="fade-up">
-                            <span class="th-icon"><img src="assets/img/icon/th-footer-btn-icon.png" alt=""></span>
-                            <span class="th-text">CONTACT ME</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-xl-3 col-lg-3 col-md-2">
-                    <div class="th-footer-left-logo">
-                        <img src="assets/img/logo/th-logo-white.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-7 mx-auto text-center">
-                    <h2 class="th-footer-mail-title"><a href="mailto:pixelor@gmail.com">p@nullphpscript.com</a></h2>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-3">
-                    <h3 class="th-opentowork"><span></span>Opent To Work</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 text-center text-xl-start">
-                    <!-- footer widget 1 -->
-                    <div class="th-footer-widget-1 mb-30">
-                        <div class="th-footer-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="portfolio-details.html">Project</a></li>
-                                <li><a href="blog-classic.html">Blog</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 text-center text-xl-end">
-                    <!-- footer widget 1 -->
-                    <div class="th-footer-widget-2 mb-30">
-                        <div class="th-footer-social">
-                            <ul>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Linkedin</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Instagram</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="th-footer-border">
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="copyright-top-border">
-                    <div class="row">
-                        <div class="col-xl-6 col-md-6">
-                            <div class="th-copyright mb-40">
-                                <p class="th-copyright-text">Copyright © 2026 <a href="index.html">Pixelor</a>, All
-                                    Rights Reserved.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section py-12 sm:py-16 lg:py-20"
+        style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-cyan-400 text-xs sm:text-sm font-mono uppercase tracking-widest">Let's Talk</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mt-2">Get In <span
+                        class="gradient-text">Touch</span></h2>
+                <div class="w-16 sm:w-24 h-1 gradient-bg mx-auto mt-4 sm:mt-6 rounded-full glow"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-4 sm:mb-6 text-white">Let's Connect</h3>
+                    <p class="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg">
+                        I'm always interested in hearing about new projects and opportunities.
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-start glass-card p-4 sm:p-5 rounded-xl neon-border">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full gradient-bg flex items-center justify-center text-black mr-3 sm:mr-4 flex-shrink-0 glow">
+                                <i class="fas fa-envelope text-lg sm:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1 text-sm sm:text-base">Email</h4>
+                                <p class="text-gray-400 text-sm sm:text-base break-all">sanjog.godar2058@gmail.com</p>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-md-6 text-end">
-                            <div class="th-copyright-menu mb-40">
-                                <ul>
-                                    <li><a href="#">Privacy Policy </a></li>
-                                    <li><a href="#">Terms and Conditions</a></li>
-                                    <li><a href="#">Support</a></li>
-                                </ul>
+
+                        <div class="flex items-start glass-card p-4 sm:p-5 rounded-xl neon-border">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full gradient-bg flex items-center justify-center text-black mr-3 sm:mr-4 flex-shrink-0 glow">
+                                <i class="fas fa-phone text-lg sm:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1 text-sm sm:text-base">Phone
+
+                                </h4>
+                                <p class="text-gray-400 text-sm sm:text-base"> <img src="https://flagcdn.com/w20/np.png"
+                                        alt="Nepal" class="inline-block w-3 h-4" /> +977 9806514021</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start glass-card p-4 sm:p-5 rounded-xl neon-border">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full gradient-bg flex items-center justify-center text-black mr-3 sm:mr-4 flex-shrink-0 glow">
+                                <i class="fas fa-map-marker-alt text-lg sm:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1 text-sm sm:text-base">Location</h4>
+                                <p class="text-gray-400 text-sm sm:text-base">Pokhara, Nepal</p>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="mt-6 sm:mt-8">
+                        <h4 class="font-bold text-white mb-3 sm:mb-4 text-base sm:text-lg">Follow Me</h4>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="www.linkedin.com/in/sanjog-godar"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400 ">
+                                <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="https://github.com/Sanjog-Godar"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400 ">
+                                <i class="fab fa-github text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="https://www.facebook.com/tsanzog"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400 ">
+                                <i class="fa-brands fa-facebook text-lg sm:text-xl"></i>
+                            </a>
+                            <a href="mailto:Sanjog.godar2058@gmail.com"
+                                class="social-icon w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card neon-border flex items-center justify-center text-cyan-400 hover:bg-cyan-400 ">
+                                <i class="fas fa-envelope text-lg sm:text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card neon-border p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                    <form id="contact-form">
+                        <div class="mb-4 sm:mb-6">
+                            <label for="name" class="block text-white font-bold mb-2 text-sm sm:text-base">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-cyan-400/30 text-white focus:border-cyan-400 focus:outline-none transition placeholder-gray-500 text-sm sm:text-base">
+                        </div>
+
+                        <div class="mb-4 sm:mb-6">
+                            <label for="email"
+                                class="block text-white font-bold mb-2 text-sm sm:text-base">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-cyan-400/30 text-white focus:border-cyan-400 focus:outline-none transition placeholder-gray-500 text-sm sm:text-base">
+                        </div>
+
+                        <div class="mb-4 sm:mb-6">
+                            <label for="subject"
+                                class="block text-white font-bold mb-2 text-sm sm:text-base">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-cyan-400/30 text-white focus:border-cyan-400 focus:outline-none transition placeholder-gray-500 text-sm sm:text-base">
+                        </div>
+
+                        <div class="mb-4 sm:mb-6">
+                            <label for="message"
+                                class="block text-white font-bold mb-2 text-sm sm:text-base">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-cyan-400/30 text-white focus:border-cyan-400 focus:outline-none transition placeholder-gray-500 text-sm sm:text-base"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full gradient-bg px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-black font-bold text-sm sm:text-base hover:shadow-2xl hover:scale-105 transition glow">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="container">
-            <a href="contact.html" data-aos="fade-up">
-                <div class="footer-large-title tp_fade_anim mb-30">
-                    <h3 class="footer-title">PIXELOR</h3>
+    <!-- Footer -->
+    <!-- <footer style="background: #0a0a0a;" class="text-white py-8 sm:py-12 border-t border-cyan-400/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4 sm:mb-6">
+                <a href="#home" class="text-2xl sm:text-3xl font-bold gradient-text inline-block">
+                    <span class="text-3xl sm:text-4xl">&lt;</span>DEV<span class="text-3xl sm:text-4xl">/&gt;</span>
+                </a>
+            </div>
+            <p class="mb-3 sm:mb-4 text-gray-400 text-sm sm:text-base">&copy; 2024 Elite Developer. All rights reserved.</p>
+            <p class="text-xs sm:text-sm text-cyan-400">Designed & Built with <span class="text-red-500">❤️</span> and lots of <span class="gradient-text">code</span></p>
+        </div>
+    </footer> -->
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full gradient-bg text-white shadow-lg hidden items-center justify-center hover:scale-110 transition z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 404 Error Page -->
+    <section id="error-404" class="min-h-screen flex items-center justify-center relative overflow-hidden hidden"
+        style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="particles" id="particles-404"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <div class="mb-8">
+                <h1 class="text-8xl md:text-9xl font-black gradient-text mb-4">404</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Page Not Found</h2>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Oops! The page you're looking for doesn't exist on this domain.
+                </p>
+                <div class="bg-gray-800 rounded-lg p-4 md:p-6 mb-8 inline-block max-w-2xl">
+                    <p class="text-cyan-400 font-mono text-sm md:text-base break-all">
+                        <span id="error-url">https://sanjoggodar.com</span>
+                    </p>
                 </div>
-            </a>
+                <p class="text-gray-500 text-base md:text-lg mb-12">Error Code: 404 - Not Found</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#home" class="gradient-bg px-8 py-4 rounded-full text-black font-bold text-lg hover:shadow-2xl hover:scale-105 transition glow">
+                    Back to Home
+                </a>
+                <a href="#projects" class="neon-border px-8 py-4 rounded-full text-cyan-400 font-bold text-lg hover:shadow-1xl hover:scale-105 transition glow">
+                    View Projects
+                </a>
+            </div>
         </div>
+    </section>
 
-    </footer>
-    <!-- =========== footer area end =========== -->
-    <!-- progress -->
-    <div class="paginacontainer">
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-    </div>
-    <!-- =========== footer area end =========== -->
+    <script src="script.js"></script>
 
-
-    <!-- js file include here -->
-    <!-- jquery js -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- magnific-popup js -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- swiper-bundle js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- nice-select js -->
-    <script src="assets/js/nice-select.js"></script>
-    <!-- aos js -->
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
-    <!-- plugin js -->
-    <script src="assets/js/plugin.js"></script>
-    <script src="assets/js/gAnim.js"></script>
-    <!-- SmoothScroll js -->
-    <script src="assets/js/SmoothScroll.js"></script>
-    <!-- counter -->
-    <script src="assets/js/jquery.waypoints.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    
-    <script src="assets/js/parallaxie.js"></script>
-    <!-- main js -->
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

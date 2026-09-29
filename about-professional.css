@@ -484,3 +484,208 @@
     border-bottom: none !important;
   }
 }
+
+/* ============================================================
+   EXPERIENCE SECTION  PROFESSIONAL TIMELINE
+   ============================================================ */
+
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Timeline vertical line */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 180px;
+  width: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+.exp-item {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+}
+
+/* Timeline dot */
+.exp-item::before {
+  content: '';
+  position: absolute;
+  top: 0.35rem;
+  left: 176.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0e0e14;
+  border: 2px solid #a78bfa;
+  box-shadow: 0 0 0 4px #0e0e14;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.exp-item:hover::before {
+  background: #a78bfa;
+}
+
+.exp-date {
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-top: 0.2rem;
+}
+
+.exp-date span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b687e;
+  letter-spacing: 0.02em;
+}
+
+.exp-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exp-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-header h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #f0eeff;
+  letter-spacing: -0.01em;
+}
+
+.exp-company {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #a78bfa;
+}
+
+.exp-desc p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c8c5dc;
+  margin-bottom: 1rem;
+}
+
+.exp-desc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exp-desc ul li {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #8b889e;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.exp-desc ul li::before {
+  content: '?';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4f4d60;
+  font-family: inherit;
+}
+
+.exp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.exp-skills span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8b889e;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+.exp-item:hover .exp-skills span {
+  border-color: rgba(167,139,250,0.3);
+  color: #c4b5fd;
+  background: rgba(167,139,250,0.05);
+}
+
+/* Responsive Experience */
+@media (max-width: 768px) {
+  .exp-timeline::before {
+    left: 8px;
+  }
+  .exp-item::before {
+    left: 4.5px;
+  }
+  .exp-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .exp-date {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+  .exp-content {
+    padding-left: 2rem;
+  }
+}
+
+/* ============================================================
+   GLOBAL ANIMATIONS (Scroll Fade Up)
+   ============================================================ */
+
+/* Initial state for elements with data-scroll-class="in-view" */
+[data-scroll-class="in-view"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Triggered state */
+[data-scroll-class="in-view"].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add in-view to major sections */
+.about-grid, .about-services, .head {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-grid.in-view, .about-services.in-view, .head.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

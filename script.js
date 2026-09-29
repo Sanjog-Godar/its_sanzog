@@ -313,3 +313,21 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+
+// Custom Scroll Fade Animations
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('[data-scroll-class="in-view"]').forEach(el => {
+        fadeObserver.observe(el);
+    });
+});

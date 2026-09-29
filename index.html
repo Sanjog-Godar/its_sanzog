@@ -29,6 +29,7 @@
     <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" rel="stylesheet"/>
 
     <link href="style.css" rel="stylesheet"/>
+    <link href="about-professional.css" rel="stylesheet"/>
     <link href="mobile.css" rel="stylesheet"/>
 
   </head>
@@ -441,7 +442,7 @@
           <span class="about-eyebrow">About me</span>
         </div>
 
-        <div class="about-grid">
+        <div class="about-grid" data-scroll data-scroll-class="in-view">
 
           <!-- Left: Photo column -->
           <div class="about-photo-col" data-r="">
@@ -525,7 +526,7 @@
         </div>
 
         <!-- Services strip -->
-        <div class="about-services">
+        <div class="about-services" data-scroll data-scroll-class="in-view">
           <div class="about-service-item">
             <div class="about-service-icon"><i class="fas fa-code"></i></div>
             <div>
@@ -558,203 +559,42 @@
 
       </section>
 
-      <!-- Experience Section -->
+            <!-- Experience Section -->
 
-      <section id="experience" class="sec wrap">
+      <section id="experience" class="sec wrap" data-scroll-section>
 
-        <div class="head" data-r="">
-
-          <p class="eyebrow mono">My journey</p>
-
-          <h2>Work <span class="g">experience</span></h2>
-
+        <div class="head" data-scroll data-scroll-speed="0.5" data-scroll-class="in-view">
+          <p class="eyebrow mono">Career Path</p>
+          <h2>Work <em>experience</em></h2>
         </div>
 
-        <div class="tl" data-r="">
-
-          <span class="dot"></span>
-
-          <article class="card sp job">
-
-            <span class="when mono">2025 - Present</span>
-
-            <h3>Mobile Application Developer</h3>
-
-            <p class="org">Websoft Technology Nepal Pvt Ltd.</p>
-
-            <ul>
-
-              <li><i aria-hidden="true" class="fas fa-chevron-right"></i><span>Worked on Flutter‑based Android apps for client projects</span></li>
-
-              <li><i aria-hidden="true" class="fas fa-chevron-right"></i><span>Built new screens and features, and connected apps to REST APIs and Firebase</span></li>
-
-              <li><i aria-hidden="true" class="fas fa-chevron-right"></i><span>Helped to fix bugs, improve performance, and polish the UI before releases</span></li>
-
-              <li><i aria-hidden="true" class="fas fa-chevron-right"></i><span>Collaborated with designers and backend developers to ship updates on time</span></li>
-
-            </ul>
-
-            <p class="tags"><span>Flutter</span><span>Dart</span><span>Rest API</span></p>
-
-          </article>
-
-          <!-- Experience Item 2 -->
-
-          <!-- <div class="mb-8 sm:mb-10 lg:mb-12 ml-6 sm:ml-8 lg:ml-10 timeline-item relative">
-
-                        <div
-
-                            class="absolute -left-9 sm:-left-11 lg:-left-13 top-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg glow">
-
-                        </div>
-
-                        <div
-
-                            class="glass-card neon-border p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-[1.02] transition">
-
-                            <span
-
-                                class="text-xs sm:text-sm font-bold gradient-text font-mono uppercase tracking-wider">2019
-
-                                - 2021</span>
-
-                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-2 sm:mt-3">Full Stack
-
-                                Developer</h3>
-
-                            <p class="text-cyan-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Digital
-
-                                Solutions Ltd.</p>
-
-                            <ul class="text-gray-400 space-y-2 text-sm sm:text-base">
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Developed
-
-                                        responsive web applications using modern frameworks</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Optimized
-
-                                        database queries improving performance by 40%</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Integrated
-
-                                        third-party APIs and payment gateways</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Participated
-
-                                        in agile development processes</span></li>
-
-                            </ul>
-
-                            <div class="flex flex-wrap gap-2 mt-4 sm:mt-5">
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Vue.js</span>
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">Python</span>
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">MongoDB</span>
-
-                            </div>
-
-                        </div>
-
-                    </div> -->
-
-          <!-- Experience Item 3 -->
-
-          <!-- <div class="mb-8 sm:mb-10 lg:mb-12 ml-6 sm:ml-8 lg:ml-10 timeline-item relative">
-
-                        <div
-
-                            class="absolute -left-9 sm:-left-11 lg:-left-13 top-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full gradient-bg glow">
-
-                        </div>
-
-                        <div
-
-                            class="glass-card neon-border p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-[1.02] transition">
-
-                            <span
-
-                                class="text-xs sm:text-sm font-bold gradient-text font-mono uppercase tracking-wider">2018
-
-                                - 2019</span>
-
-                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-2 sm:mt-3">Junior Web
-
-                                Developer</h3>
-
-                            <p class="text-cyan-400 font-bold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">StartUp
-
-                                Ventures</p>
-
-                            <ul class="text-gray-400 space-y-2 text-sm sm:text-base">
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Built
-
-                                        and maintained company website and internal tools</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Collaborated
-
-                                        with design team to implement UI/UX improvements</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Fixed
-
-                                        bugs and improved application performance</span></li>
-
-                                <li class="flex items-start"><i
-
-                                        class="fas fa-chevron-right text-cyan-400 mr-2 mt-1 flex-shrink-0"></i><span>Learned
-
-                                        best practices in web development</span></li>
-
-                            </ul>
-
-                            <div class="flex flex-wrap gap-2 mt-4 sm:mt-5">
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">HTML/CSS</span>
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">JavaScript</span>
-
-                                <span
-
-                                    class="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs sm:text-sm font-mono border border-cyan-400/30">PHP</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+        <div class="exp-timeline">
+          
+          <div class="exp-item" data-scroll data-scroll-class="in-view">
+            <div class="exp-date">
+              <span>2025 &mdash; Present</span>
             </div>
-
-        </div> -->
+            <div class="exp-content">
+              <div class="exp-header">
+                <h3>Mobile Application Developer</h3>
+                <span class="exp-company">Websoft Technology Nepal Pvt Ltd.</span>
+              </div>
+              <div class="exp-desc">
+                <p>Developing robust, cross-platform Android applications using Flutter for various client projects.</p>
+                <ul>
+                  <li>Architected and built new feature modules, integrating RESTful APIs and Firebase services.</li>
+                  <li>Conducted performance profiling, bug fixing, and strict UI polishing for production releases.</li>
+                  <li>Collaborated tightly with design teams and backend engineers to ensure timely delivery of sprint goals.</li>
+                </ul>
+              </div>
+              <div class="exp-skills">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>REST API</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -764,7 +604,7 @@
 
       <section id="projects" class="sec wrap">
 
-        <div class="head" data-r="">
+        <div class="head" data-scroll data-scroll-class="in-view">
 
           <p class="eyebrow mono">Portfolio</p>
 
@@ -914,7 +754,7 @@
 
       <section id="skills" class="sec wrap">
 
-        <div class="head" data-r="">
+        <div class="head" data-scroll data-scroll-class="in-view">
 
           <p class="eyebrow mono">My expertise</p>
 

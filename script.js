@@ -66,21 +66,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = $$('.nav-link');
     
     // Mobile menu toggle
+    function openMenu() {
+        menu.classList.add('open');
+        menuBtn.classList.add('active');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('nav-open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menu.classList.remove('open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+        document.body.style.overflow = '';
+    }
+
     menuBtn.addEventListener('click', () => {
-        const isOpen = menu.classList.contains('open');
-        menu.classList.toggle('open', !isOpen);
-        menuBtn.classList.toggle('active', !isOpen);
-        menuBtn.setAttribute('aria-expanded', !isOpen);
-        document.body.style.overflow = !isOpen ? 'hidden' : '';
+        menu.classList.contains('open') ? closeMenu() : openMenu();
     });
-    
-    // Close menu when clicking on links
+
+    // Close on nav link click
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('open');
-            menuBtn.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close on overlay click (the ::before pseudo-element on body.nav-open)
+    document.addEventListener('click', (e) => {
+        if (document.body.classList.contains('nav-open') && !menu.contains(e.target) && e.target !== menuBtn) {
+            closeMenu();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
     });
     
     // Navigation scroll effect

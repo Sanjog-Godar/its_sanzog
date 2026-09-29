@@ -1,0 +1,347 @@
+/* ============================================
+   ABOUT SECTION — PREMIUM REDESIGN
+   ============================================ */
+
+/* ---- Section header ---- */
+#about .head {
+  text-align: left;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+#about .head .eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #a78bfa;
+  text-transform: none;
+  margin-bottom: 0.75rem;
+}
+
+#about .head h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #f4f2ef;
+  line-height: 1.05;
+}
+
+#about .head h2 .g {
+  font-style: italic;
+  color: #a78bfa !important;
+  -webkit-text-fill-color: #a78bfa !important;
+  background: none !important;
+}
+
+/* ---- Bento grid ---- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+/* Span helpers */
+.s2 { grid-column: span 2; }
+.s3 { grid-column: span 3; }
+.s4 { grid-column: span 4; }
+.s6 { grid-column: span 6; }
+.wid { grid-column: span 6; }
+
+/* ---- Base card redesign ---- */
+.card.sp {
+  background: #111117;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+
+.card.sp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(167,139,250,0.05), transparent);
+  pointer-events: none;
+}
+
+.card.sp:hover {
+  border-color: rgba(167,139,250,0.2);
+  transform: translateY(-3px);
+}
+
+/* ---- Professional Summary card ---- */
+.card.sp.s4 h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #e8e4f0;
+  margin-bottom: 1.25rem;
+}
+
+.card.sp.s4 p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #7a7890;
+  margin-bottom: 1rem;
+}
+
+.card.sp.s4 p:last-child { margin-bottom: 0; }
+
+/* ---- Photo card ---- */
+.card.sp.ph {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #0d0d12;
+}
+
+.card.sp.ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0;
+  display: block;
+  transition: transform 0.6s ease;
+  min-height: 260px;
+}
+
+.card.sp.ph:hover img {
+  transform: scale(1.03);
+}
+
+.card.sp.ph .cap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10,10,16,0.95) 0%, transparent 100%);
+  margin-top: 0;
+  text-align: left;
+}
+
+.card.sp.ph .cap h3.g {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #e8e4f0 !important;
+  -webkit-text-fill-color: #e8e4f0 !important;
+  background: none !important;
+  margin-bottom: 0.25rem;
+}
+
+.card.sp.ph .cap p.mono {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #7a7890;
+  letter-spacing: 0.06em;
+}
+
+.card.sp.ph .cap .tags {
+  margin-top: 0.75rem;
+}
+
+.card.sp.ph .cap .tags span {
+  background: rgba(167,139,250,0.12);
+  color: #a78bfa;
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 6px;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* ---- Resume card ---- */
+.card.sp.cv {
+  background: linear-gradient(135deg, #14121e 0%, #1a1626 100%);
+  border-color: rgba(167,139,250,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.card.sp.cv h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #e8e4f0;
+  margin-bottom: 0.5rem;
+}
+
+.card.sp.cv > div p {
+  font-size: 0.85rem;
+  color: #5e5b72;
+  line-height: 1.6;
+}
+
+.card.sp.cv .btn.solid.mag,
+.card.sp.cv a.btn.solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #a78bfa;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: fit-content;
+}
+
+.card.sp.cv .btn.solid.mag:hover,
+.card.sp.cv a.btn.solid:hover {
+  background: #7c5ce8;
+  transform: translateY(-2px);
+}
+
+/* ---- Personal info card ---- */
+.card.sp.s6 {
+  background: #0f0f15;
+}
+
+.card.sp.s6 > h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a4860;
+  margin-bottom: 1.75rem;
+}
+
+.card.sp.s6 > h3 .hi3 {
+  display: none; /* icon clutters it */
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.facts > div {
+  border-left: 2px solid rgba(167,139,250,0.2);
+  padding-left: 0.875rem;
+}
+
+.facts dt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #4a4860;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.facts dt i { display: none; } /* hide icon — using border instead */
+
+.facts dd {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #c8c4dc;
+}
+
+.facts dd a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.facts dd a:hover { text-decoration: underline; }
+
+/* ---- "What I do" heading ---- */
+h3.wid {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a4860;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding: 0;
+  background: none !important;
+  border: none !important;
+}
+
+h3.wid .hi3 { display: none; }
+
+/* ---- "What I do" service cards ---- */
+.card.sp.s3 {
+  background: #111117;
+  border-color: rgba(255,255,255,0.06);
+  padding: 1.75rem;
+}
+
+.card.sp.s3:nth-child(1) { border-top: 2px solid #a78bfa; }
+.card.sp.s3:nth-child(2) { border-top: 2px solid #e07b54; }
+.card.sp.s3:nth-child(3) { border-top: 2px solid #4ade80; }
+.card.sp.s3:nth-child(4) { border-top: 2px solid #38bdf8; }
+
+.card.sp.s3 .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #a78bfa;
+  margin-bottom: 1.25rem;
+}
+
+.card.sp.s3:nth-child(2) .ico { color: #e07b54; }
+.card.sp.s3:nth-child(3) .ico { color: #4ade80; }
+.card.sp.s3:nth-child(4) .ico { color: #38bdf8; }
+
+.card.sp.s3 h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ddd9ec;
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.01em;
+}
+
+.card.sp.s3 p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #5e5b72;
+  line-height: 1.7;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .bento { grid-template-columns: 1fr 1fr; }
+  .s4 { grid-column: span 2; }
+  .s2 { grid-column: span 2; }
+  .s6 { grid-column: span 2; }
+  .wid { grid-column: span 2; }
+  .s3 { grid-column: span 2; }
+  .facts { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .bento { grid-template-columns: 1fr; }
+  .s4, .s2, .s6, .s3, .wid { grid-column: span 1; }
+  .facts { grid-template-columns: 1fr; }
+}

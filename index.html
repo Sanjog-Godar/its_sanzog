@@ -31,7 +31,55 @@
     <link href="style.css" rel="stylesheet"/>
     <link href="about-professional.css" rel="stylesheet"/>
     <link href="mobile.css" rel="stylesheet"/>
+    <link href="skills.css" rel="stylesheet"/>
+    <link href="projects.css" rel="stylesheet"/>
 
+    <style>
+      @media (max-width: 768px) {
+        .about-section { padding-top: 8rem !important; }
+        .sec { padding-top: 8rem !important; }
+        
+        /* Fix Mobile Menu Drawer */
+        #menu {
+          position: fixed !important;
+          top: 0;
+          right: -100% !important;
+          left: auto !important;
+          width: 280px !important;
+          height: 100dvh !important;
+          background: #07080a !important; /* solid background so it doesn't overlap text */
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+          z-index: 9999 !important;
+          transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          border-left: 1px solid rgba(255,255,255,0.1) !important;
+          box-shadow: -10px 0 30px rgba(0,0,0,0.7) !important;
+        }
+        #menu.open {
+          right: 0 !important;
+          left: auto !important;
+        }
+        #menu-btn {
+          z-index: 10000 !important;
+          position: relative !important;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+        #menu-btn span {
+          pointer-events: none !important;
+        }
+      }
+      /* Contrast fixes */
+      .about-service-item p {
+        color: #a3a3a3 !important;
+        font-size: 0.9rem !important;
+      }
+      .about-service-icon {
+        color: #737373;
+      }
+    </style>
   </head>
 
   <body>
@@ -563,7 +611,7 @@
 
       <section id="experience" class="sec wrap" data-scroll-section>
 
-        <div class="head" data-scroll data-scroll-speed="0.5" data-scroll-class="in-view">
+        <div class="head" data-scroll data-scroll-class="in-view">
           <p class="eyebrow mono">Career Path</p>
           <h2>Work <em>experience</em></h2>
         </div>
@@ -612,489 +660,307 @@
 
         </div>
 
-        <div class="pg">
+        <div class="projects-list">
 
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
+          <!-- Project 1 -->
+          <article class="project-item" data-scroll data-scroll-class="in-view">
+            <div class="project-visual">
               <img alt="Maps for Clash App screenshot" loading="lazy" src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767091459/1_p28sbe.png"/>
-
             </div>
-
-            <div class="bd">
-
-              <h3>Maps for Clash App</h3>
-
-              <p>A full-featured clash of clans base copy application along with various features like global chat system.</p>
-
-              <p class="tags"><span>Flutter</span><span>Dart</span><span>Supabase</span><span>Firebase</span></p>
-
-              <p class="links"><a href="https://play.google.com/store/apps/details?id=com.sanjog.clash_of_bases"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="privacy-policy.html"><i aria-hidden="true" class="fas fa-shield-alt"></i> Privacy</a></p>
-
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Flutter</span><span>Dart</span><span>Supabase</span><span>Firebase</span>
+              </div>
+              <h3 class="project-title">Maps for Clash</h3>
+              <p class="project-desc">A full-featured Clash of Clans base copy application serving thousands of active users, complete with a real-time global chat system.</p>
+              <div class="project-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sanjog.clash_of_bases" target="_blank" rel="noopener"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live App</a>
+                <a href="privacy-policy.html"><i aria-hidden="true" class="fas fa-shield-alt"></i> Privacy</a>
+              </div>
             </div>
-
           </article>
 
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
+          <!-- Project 2 -->
+          <article class="project-item" data-scroll data-scroll-class="in-view">
+            <div class="project-visual">
               <img alt="Vehicle attendance dashboard" loading="lazy" src="https://res.cloudinary.com/dlevkebqx/image/upload/v1768663955/pngtree-big-isolated-vehicle-vector-colorful-icons-flat-illustrations-of-delivery-by-png-image_7255237_kmleud.jpg"/>
-
             </div>
-
-            <div class="bd">
-
-              <h3>Vehicle Attendance &amp; Fuel Tracking</h3>
-
-              <p>A responsive Next.js dashboard for daily vehicle attendance, kilometer tracking, and fuel bill calculation for a Jeep driver.</p>
-
-              <p class="tags"><span>Next.Js</span><span>Typescript</span><span>Supabase</span></p>
-
-              <p class="links"><a href="https://vehiclemgmt.vercel.app"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="https://github.com/Sanjog-Godar/Automation/tree/main/Vehicle_Attendance"><i aria-hidden="true" class="fab fa-github"></i> Code</a></p>
-
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
+              </div>
+              <h3 class="project-title">Fleet Tracker</h3>
+              <p class="project-desc">A responsive dashboard built for a logistics client to track daily vehicle attendance, kilometer logs, and automate fuel bill calculations.</p>
+              <div class="project-links">
+                <a href="https://vehiclemgmt.vercel.app" target="_blank" rel="noopener"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/Sanjog-Godar/Automation/tree/main/Vehicle_Attendance" target="_blank" rel="noopener"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+              </div>
             </div>
-
           </article>
 
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
+          <!-- Project 3 -->
+          <article class="project-item" data-scroll data-scroll-class="in-view">
+            <div class="project-visual">
               <img alt="Social Media App" loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600"/>
-
             </div>
-
-            <div class="bd">
-
-              <h3>Social Media App</h3>
-
-              <p>A modern social networking platform with real-time messaging, post sharing, and user authentication.</p>
-
-              <p class="tags"><span>React Native</span><span>Firebase</span><span>Redux</span></p>
-
-              <p class="links"><a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a></p>
-
+            <div class="project-content">
+              <div class="project-tags">
+                <span>React Native</span><span>Firebase</span><span>Redux</span>
+              </div>
+              <h3 class="project-title">Social Connect</h3>
+              <p class="project-desc">A modern social networking platform with real-time messaging, post sharing, and secure user authentication flows.</p>
+              <div class="project-links">
+                <a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+              </div>
             </div>
-
           </article>
 
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
-              <img alt="Project Management Tool" loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600"/>
-
-            </div>
-
-            <div class="bd">
-
-              <h3>Project Management Tool</h3>
-
-              <p>Collaborative project management application with task tracking, team collaboration, and progress visualization.</p>
-
-              <p class="tags"><span>Angular</span><span>Express</span><span>MongoDB</span></p>
-
-              <p class="links"><a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a></p>
-
-            </div>
-
-          </article>
-
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
-              <img alt="AI Chatbot Platform" loading="lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600"/>
-
-            </div>
-
-            <div class="bd">
-
-              <h3>AI Chatbot Platform</h3>
-
-              <p>Intelligent chatbot platform with NLP capabilities, multi-language support, and integration options.</p>
-
-              <p class="tags"><span>Python</span><span>TensorFlow</span><span>Flask</span></p>
-
-              <p class="links"><a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a></p>
-
-            </div>
-
-          </article>
-
-          <article class="card proj sp" data-r="">
-
-            <div class="im">
-
+          <!-- Project 4 -->
+          <article class="project-item" data-scroll data-scroll-class="in-view">
+            <div class="project-visual">
               <img alt="Fitness Tracking App" loading="lazy" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600"/>
-
             </div>
-
-            <div class="bd">
-
-              <h3>Fitness Tracking App</h3>
-
-              <p>Mobile fitness application with workout tracking, nutrition planning, and progress analytics.</p>
-
-              <p class="tags"><span>Flutter</span><span>Dart</span><span>Firebase</span></p>
-
-              <p class="links"><a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live demo</a><a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a></p>
-
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Flutter</span><span>Dart</span><span>Riverpod</span>
+              </div>
+              <h3 class="project-title">Fitness Tracker</h3>
+              <p class="project-desc">Mobile fitness application featuring interactive workout tracking, custom nutrition planning, and visual progress analytics.</p>
+              <div class="project-links">
+                <a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+              </div>
             </div>
-
           </article>
 
         </div>
 
-      </section>
-
-      <!-- Skills Section -->
-
-      <section id="skills" class="sec wrap">
-
+           <!-- Skills Section -->
+      <section id="skills" class="skills-section sec wrap">
         <div class="head" data-scroll data-scroll-class="in-view">
-
           <p class="eyebrow mono">My expertise</p>
-
           <h2>Technical <span class="g">skills</span></h2>
-
         </div>
 
-        <div class="bento">
-
-          <div class="card sk sp s3" data-r="">
-
-            <h3><i aria-hidden="true" class="fas fa-code hi3"></i> Frontend Development</h3>
-
-            <ul>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Next.js</span>
-
-                  <em>80%</em>
-
+        <div class="skills-grid">
+          <!-- Mobile apps -->
+          <div class="skill-group mobile-group">
+            <div class="skill-group-header">
+              <span class="mono">01 / Mobile apps</span>
+              <div class="line"></div>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Flutter</span>
+                    <span class="skill-prof mono">Daily use</span>
+                  </div>
+                  <p>Shipped 3 production apps. I rely heavily on Riverpod for state management and custom animations.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="80%" style="--v:80%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Html &amp; CSS</span>
-
-                  <em>75%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Firebase</span>
+                    <span class="skill-prof mono">Comfortable</span>
+                  </div>
+                  <p>My go-to backend for mobile. Auth, Firestore, and Cloud Functions to get prototypes moving fast.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="75%" style="--v:75%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>JavaScript</span>
-
-                  <em>65%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Play Console / App Store</span>
+                  </div>
+                  <p>Navigating the review processes, setting up CI/CD pipelines, and managing beta testing.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="65%" style="--v:65%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Typescript</span>
-
-                  <em>85%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Testing</span>
+                  </div>
+                  <p>Writing integration tests to catch regressions before they hit real users.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="85%" style="--v:85%"></i>
-
-                </div>
-
               </li>
-
             </ul>
-
           </div>
 
-          <div class="card sk sp s3" data-r="">
-
-            <h3><i aria-hidden="true" class="fas fa-server hi3"></i> Backend Development</h3>
-
-            <ul>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Laravel(PHP)</span>
-
-                  <em>80%</em>
-
+          <!-- Web -->
+          <div class="skill-group web-group">
+            <div class="skill-group-header">
+              <span class="mono">02 / Web</span>
+              <div class="line"></div>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Next.js</span>
+                    <span class="skill-prof mono">Familiar</span>
+                  </div>
+                  <p>Layout inspiration: Brian Lovin's portfolio, but built my own way with the App Router and server actions.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="80%" style="--v:80%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>REST APIs</span>
-
-                  <em>90%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>TypeScript</span>
+                    <span class="skill-prof mono">Comfortable</span>
+                  </div>
+                  <p>I add types everywhere. It just saves me from debugging silly runtime errors later.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>MySQL</span>
-
-                  <em>75%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>JavaScript</span>
+                    <span class="skill-prof mono">Daily use</span>
+                  </div>
+                  <p>The foundation. I write a lot of vanilla JS when frameworks feel too heavy.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="75%" style="--v:75%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Supabase</span>
-
-                  <em>90%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>HTML / CSS</span>
+                  </div>
+                  <p>Semantic markup and custom layouts from scratch. I actually enjoy writing pure CSS.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
             </ul>
-
           </div>
 
-          <div class="card sk sp s3" data-r="">
-
-            <h3><i aria-hidden="true" class="fas fa-cloud hi3"></i> Application Development &amp; Deployment</h3>
-
-            <ul>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Flutter</span>
-
-                  <em>90%</em>
-
+          <!-- Backend & data -->
+          <div class="skill-group backend-group">
+            <div class="skill-group-header">
+              <span class="mono">03 / Backend & data</span>
+              <div class="line"></div>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Laravel (PHP)</span>
+                    <span class="skill-prof mono">Comfortable</span>
+                  </div>
+                  <p>Built 2 monolithic web platforms using MVC architecture and Eloquent ORM.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Firebase (Auth &amp; DB)</span>
-
-                  <em>90%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>REST APIs</span>
+                    <span class="skill-prof mono">Daily use</span>
+                  </div>
+                  <p>Designing clean JSON endpoints for my mobile apps to consume.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Play Console and App Store</span>
-
-                  <em>95%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>MySQL</span>
+                    <span class="skill-prof mono">Familiar</span>
+                  </div>
+                  <p>Structuring relational databases and optimizing queries for production loads.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="95%" style="--v:95%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Testing</span>
-
-                  <em>90%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Supabase</span>
+                  </div>
+                  <p>My favorite PostgreSQL alternative for side projects. Love the real-time subscriptions.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
             </ul>
-
           </div>
 
-          <div class="card sk sp s3" data-r="">
-
-            <h3><i aria-hidden="true" class="fas fa-tools hi3"></i> Trading &amp; Core Programming</h3>
-
-            <ul>
-
-              <li>
-
-                <div class="t">
-
-                  <span>MQL5</span>
-
-                  <em>80%</em>
-
+          <!-- Algorithmic trading -->
+          <div class="skill-group trading-group">
+            <div class="skill-group-header">
+              <span class="mono">04 / Algorithmic trading</span>
+              <div class="line"></div>
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>MQL5</span>
+                    <span class="skill-prof mono">Comfortable</span>
+                  </div>
+                  <p>Built over 15 automated trading bots for MetaTrader 5, handling live execution and risk management.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="80%" style="--v:80%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>Pine Script</span>
-
-                  <em>90%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>Pine Script</span>
+                    <span class="skill-prof mono">Comfortable</span>
+                  </div>
+                  <p>Prototyping custom TradingView indicators before porting them to MQL5.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="90%" style="--v:90%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>C</span>
-
-                  <em>70%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>C</span>
+                  </div>
+                  <p>Where I learned memory management and how computers actually work under the hood.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="70%" style="--v:70%"></i>
-
-                </div>
-
               </li>
-
-              <li>
-
-                <div class="t">
-
-                  <span>C++</span>
-
-                  <em>70%</em>
-
+              <li class="skill-item">
+                <div class="skill-indicator"></div>
+                <div class="skill-content">
+                  <div class="skill-title">
+                    <span>C++</span>
+                    <span class="skill-prof mono">Familiar</span>
+                  </div>
+                  <p>Used for performance-critical logic in my algorithmic trading systems.</p>
                 </div>
-
-                <div class="b">
-
-                  <i data-w="70%" style="--v:70%"></i>
-
-                </div>
-
               </li>
-
             </ul>
-
           </div>
-
         </div>
-
       </section>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const skillsSection = document.getElementById('skills');
+          if (skillsSection) {
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-[24px]');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.1 }
+            );
+            observer.observe(skillsSection);
+          }
+        });
+      </script>
 
       <!-- Contact Section -->
 
@@ -1103,97 +969,56 @@
         <div class="bento">
 
           <div class="s3" data-r="">
-
-            <p class="eyebrow mono">Let's talk</p>
-
-            <h2 class="big">Get in <span class="g">touch</span></h2>
-
-            <h3 style="margin-bottom:.6rem">Let's connect</h3>
-
-            <p style="color:var(--mute);max-width:30rem">I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+            <p class="eyebrow mono">Contact</p>
+            <h2 class="big">Let's <span class="g">build together</span></h2>
+            <p style="color:var(--mute);max-width:30rem;margin-top:1rem;margin-bottom:2rem;line-height:1.6;">I'm currently available for new projects and full-time opportunities. If you're looking for a developer to ship scalable web or mobile apps, send me a message.</p>
 
             <div class="cl">
-
               <div>
-
                 <b class="cic"><i aria-hidden="true" class="fas fa-envelope"></i></b>
-
                 <span>
-
-<small>Email</small>
-
-                sanjog.godar2058@gmail.com
-
-              </span>
-
-              </div>
-
-              <div>
-
-                <b class="cic"><i aria-hidden="true" class="fas fa-phone"></i></b>
-
-                <span>
-
-<small>Phone</small>
-
-<span>
-
-<img alt="Nepal" height="18" src="https://flagcdn.com/w20/np.png" style="display:inline;margin-right:.45rem" width="14"/>
-
-                  +977 9806514021
-
+                  <small>Email</small>
+                  <a href="mailto:sanjog.godar2058@gmail.com" style="color:inherit;text-decoration:none;">sanjog.godar2058@gmail.com</a>
                 </span>
-
-</span>
-
               </div>
-
               <div>
-
-                <b class="cic"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></b>
-
+                <b class="cic"><i aria-hidden="true" class="fas fa-phone"></i></b>
                 <span>
-
-<small>Location</small>
-
-                Pokhara, Nepal
-
-              </span>
-
+                  <small>Phone</small>
+                  <span>
+                    <img alt="Nepal" height="18" src="https://flagcdn.com/w20/np.png" style="display:inline;margin-right:.45rem;vertical-align:text-bottom" width="14"/>
+                    +977 9806514021
+                  </span>
+                </span>
               </div>
-
+              <div>
+                <b class="cic"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></b>
+                <span>
+                  <small>Location</small>
+                  Pokhara, Nepal
+                </span>
+              </div>
             </div>
 
-            <h3 style="font-size:1.05rem;margin-bottom:.8rem">Follow me</h3>
-
+            <h3 style="font-size:1.05rem;margin-bottom:.8rem;margin-top:2rem">Connect online</h3>
             <div class="soc" style="margin-top:0">
-
-              <a aria-label="GitHub" href="https://github.com/Sanjog-Godar"><svg viewbox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"></path></svg></a>
-
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar"><svg viewbox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"></path></svg></a>
-
-              <a aria-label="Facebook" href="https://www.facebook.com/tsanzog"><svg viewbox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.95.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.15-2.4-.15-2.5 0-4.2 1.5-4.2 4.3v2.5H7.5v3.3h2.8V22z"></path></svg></a>
-
-              <a aria-label="Email" href="mailto:Sanjog.godar2058@gmail.com"><svg viewbox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z"></path></svg></a>
-
+              <a aria-label="GitHub" href="https://github.com/Sanjog-Godar" target="_blank" rel="noopener"><svg viewbox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"></path></svg></a>
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar" target="_blank" rel="noopener"><svg viewbox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"></path></svg></a>
+              <a aria-label="Email" href="mailto:sanjog.godar2058@gmail.com"><svg viewbox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z"></path></svg></a>
             </div>
-
           </div>
 
           <form id="contact-form" class="card sp s3" data-r="" style="--rd:.1s">
-
             <label>Name<input autocomplete="name" id="name" name="name" required="" type="text"/></label>
-
             <label>Email<input autocomplete="email" id="email" name="email" required="" type="email"/></label>
-
             <label>Subject<input id="subject" name="subject" required="" type="text"/></label>
-
             <label>Message<textarea id="message" name="message" required="" rows="5"></textarea></label>
-
-            <button class="btn solid mag" style="justify-content:center" type="submit"><i aria-hidden="true" class="fas fa-paper-plane"></i> Send message </button>
-
-            <p id="form-note" role="status"></p>
-
+            
+            <!-- Upgraded Send Button with explicit contrast colors -->
+            <button class="btn solid mag" style="justify-content:center; background-color: #f5f5f5; color: #0a0a0a; font-weight: 600; border: none; border-radius: 8px; padding: 12px 24px; transition: opacity 0.2s; margin-top: 8px;" type="submit" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+              <i aria-hidden="true" class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send message 
+            </button>
+            <p id="form-note" role="status" style="margin-top: 12px; font-size: 0.9rem;"></p>
           </form>
 
         </div>

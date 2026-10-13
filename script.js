@@ -28,36 +28,54 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     });
     
-    // Custom cursor
-    if (!prefersReducedMotion && window.innerWidth > 768) {
-        const cursorDot = $('#cursor-dot');
-        const cursorOutline = $('#cursor-outline');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-            cursorOutline.style.left = e.clientX + 'px';
-            cursorOutline.style.top = e.clientY + 'px';
-        });
-        
-        // Cursor interactions
-        $$('a, button, .tech-badge').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorOutline.style.borderColor = 'rgba(99, 102, 241, 0.6)';
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursorOutline.style.borderColor = 'rgba(99, 102, 241, 0.3)';
-            });
-        });
-    } else {
-        // Hide custom cursor on mobile or reduced motion
-        const cursors = $$('#cursor-dot, #cursor-outline');
-        cursors.forEach(cursor => cursor.style.display = 'none');
-        document.body.style.cursor = 'auto';
+    // Custom cursor removed per user request
+
+    // ── Theme Management (Dark & Light Mode) ────────────────
+    const themeToggleBtn = $('#theme-toggle');
+    const mobileThemeToggleBtn = $('#mobile-theme-toggle');
+    const themeColorMeta = $('meta[name="theme-color"]');
+
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+            if (themeColorMeta) themeColorMeta.setAttribute('content', '#f8fafc');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+            if (themeColorMeta) themeColorMeta.setAttribute('content', '#07080a');
+        }
+        try {
+            localStorage.setItem('theme', theme);
+        } catch (e) { }
     }
+
+    const initialTheme = document.documentElement.getAttribute('data-theme') || 
+                         (localStorage.getItem('theme')) || 
+                         (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    applyTheme(initialTheme);
+
+    function handleThemeToggle() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        applyTheme(isLight ? 'dark' : 'light');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', handleThemeToggle);
+    }
+    if (mobileThemeToggleBtn) {
+        mobileThemeToggleBtn.addEventListener('click', handleThemeToggle);
+    }
+
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        try {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'light' : 'dark');
+            }
+        } catch (err) { }
+    });
     
     // Navigation
     const nav = $('.nav');
@@ -290,6 +308,142 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ── Horizontal Projects Showcase Controller ─────────────
+    const projSlider = $('#projects-slider');
+    const projSliderWrapper = $('.projects-slider-wrapper');
+    const projCards = $$('.project-card');
+    const projTabs = $$('.project-tab');
+    const projDots = $$('.slider-dot');
+    const projPrevBtn = $('#proj-prev');
+    const projNextBtn = $('#proj-next');
+    const projIndexLabel = $('#project-current-index');
+    let currentProjIndex = 0;
+    const totalProjCount = projCards.length || 4;
+    let autoPlayTimer = null;
+    const AUTO_PLAY_INTERVAL = 4500; // 4.5 seconds
+
+    function updateProjectUI(index) {
+        currentProjIndex = Math.max(0, Math.min(index, totalProjCount - 1));
+        
+        if (projIndexLabel) {
+            projIndexLabel.textContent = String(currentProjIndex + 1).padStart(2, '0');
+        }
+
+        projTabs.forEach((tab, i) => {
+            const isActive = i === currentProjIndex;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        projDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentProjIndex);
+        });
+    }
+
+    function scrollToProject(index) {
+        if (!projSlider || !projCards[index]) return;
+        const targetCard = projCards[index];
+        projSlider.scrollTo({
+            left: targetCard.offsetLeft - projSlider.offsetLeft,
+            behavior: 'smooth'
+        });
+        updateProjectUI(index);
+    }
+
+    function nextProject() {
+        const newIndex = (currentProjIndex + 1) % totalProjCount;
+        scrollToProject(newIndex);
+    }
+
+    function prevProject() {
+        const newIndex = (currentProjIndex - 1 + totalProjCount) % totalProjCount;
+        scrollToProject(newIndex);
+    }
+
+    // Auto-switch functionality
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(() => {
+            nextProject();
+        }, AUTO_PLAY_INTERVAL);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayTimer) {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = null;
+        }
+    }
+
+    function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+
+    if (projPrevBtn) {
+        projPrevBtn.addEventListener('click', () => {
+            prevProject();
+            resetAutoPlay();
+        });
+    }
+
+    if (projNextBtn) {
+        projNextBtn.addEventListener('click', () => {
+            nextProject();
+            resetAutoPlay();
+        });
+    }
+
+    projTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            scrollToProject(index);
+            resetAutoPlay();
+        });
+    });
+
+    projDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            scrollToProject(index);
+            resetAutoPlay();
+        });
+    });
+
+    // Pause auto-switch on hover or touch
+    if (projSliderWrapper) {
+        projSliderWrapper.addEventListener('mouseenter', stopAutoPlay);
+        projSliderWrapper.addEventListener('mouseleave', startAutoPlay);
+        projSliderWrapper.addEventListener('touchstart', stopAutoPlay, { passive: true });
+        projSliderWrapper.addEventListener('touchend', startAutoPlay, { passive: true });
+    }
+
+    // Start auto-play
+    startAutoPlay();
+
+    if (projSlider) {
+        let scrollTimeout;
+        projSlider.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = projSlider.scrollLeft;
+                let closestIndex = 0;
+                let minDistance = Infinity;
+
+                projCards.forEach((card, index) => {
+                    const cardOffset = card.offsetLeft - projSlider.offsetLeft;
+                    const distance = Math.abs(scrollLeft - cardOffset);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+
+                if (closestIndex !== currentProjIndex) {
+                    updateProjectUI(closestIndex);
+                }
+            }, 60);
+        }, { passive: true });
+    }
+
     // Console easter egg
     console.log('%c🚀 Welcome to Sanjog\'s Portfolio!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
     console.log('%cInterested in the code? Check out the repository!', 'color: #06b6d4; font-size: 14px;');

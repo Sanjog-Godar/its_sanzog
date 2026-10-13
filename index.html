@@ -2,478 +2,343 @@
 
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8"/>
+  <meta charset="utf-8" />
 
-    <script>document.documentElement.classList.add("js")</script>
-
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
-    <title>Sanjog Godar · Full Stack Developer</title>
-
-    <meta content="Sanjog Godar is a full-stack web and mobile developer from Pokhara, Nepal, working with Flutter, Next.js, Laravel and Supabase." name="description"/>
-
-    <meta content="#07080a" name="theme-color"/>
-
-    <link href="favicon.png" rel="icon" type="image/png"/>
-
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" rel="stylesheet"/>
-
-    <link href="style.css" rel="stylesheet"/>
-    <link href="about-professional.css" rel="stylesheet"/>
-    <link href="mobile.css" rel="stylesheet"/>
-    <link href="skills.css" rel="stylesheet"/>
-    <link href="projects.css" rel="stylesheet"/>
-
-    <style>
-      @media (max-width: 768px) {
-        .about-section { padding-top: 8rem !important; }
-        .sec { padding-top: 8rem !important; }
-        
-        /* Fix Mobile Menu Drawer */
-        #menu {
-          position: fixed !important;
-          top: 0;
-          right: -100% !important;
-          left: auto !important;
-          width: 280px !important;
-          height: 100dvh !important;
-          background: #07080a !important; /* solid background so it doesn't overlap text */
-          display: flex !important;
-          flex-direction: column !important;
-          justify-content: center !important;
-          z-index: 9999 !important;
-          transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-          border-left: 1px solid rgba(255,255,255,0.1) !important;
-          box-shadow: -10px 0 30px rgba(0,0,0,0.7) !important;
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light" || (!savedTheme && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+          document.documentElement.setAttribute("data-theme", "light");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
         }
-        #menu.open {
-          right: 0 !important;
-          left: auto !important;
-        }
-        #menu-btn {
-          z-index: 10000 !important;
-          position: relative !important;
-          background: transparent;
-          border: none;
-          cursor: pointer;
-        }
-        #menu-btn span {
-          pointer-events: none !important;
-        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Sanjog Godar · Full Stack Developer</title>
+
+  <meta
+    content="Sanjog Godar is a full-stack web and mobile developer from Pokhara, Nepal, working with Flutter, Next.js, Laravel and Supabase."
+    name="description" />
+
+  <meta content="#07080a" name="theme-color" />
+
+  <link href="favicon.png" rel="icon" type="image/png" />
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" rel="stylesheet" />
+
+  <link href="style.css" rel="stylesheet" />
+  <link href="about-professional.css" rel="stylesheet" />
+  <link href="mobile.css" rel="stylesheet" />
+  <link href="skills.css" rel="stylesheet" />
+  <link href="projects.css" rel="stylesheet" />
+  <link href="theme.css" rel="stylesheet" />
+
+  <style>
+    @media (max-width: 768px) {
+      .about-section {
+        padding-top: 8rem !important;
       }
-      /* Contrast fixes */
-      .about-service-item p {
-        color: #a3a3a3 !important;
-        font-size: 0.9rem !important;
+
+      .sec {
+        padding-top: 8rem !important;
       }
-      .about-service-icon {
-        color: #737373;
+
+      /* Fix Mobile Menu Drawer */
+      #menu {
+        position: fixed !important;
+        top: 0;
+        right: -100% !important;
+        left: auto !important;
+        width: 280px !important;
+        height: 100dvh !important;
+        background: var(--surface, #07080a) !important;
+        /* solid background so it doesn't overlap text */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        z-index: 9999 !important;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        border-left: 1px solid var(--border, rgba(255, 255, 255, 0.1)) !important;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25) !important;
       }
-    </style>
-  </head>
 
-  <body>
+      #menu.open {
+        right: 0 !important;
+        left: auto !important;
+      }
 
-    <a class="skip" href="#main">Skip to content</a>
+      #menu-btn {
+        z-index: 10000 !important;
+        position: relative !important;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
 
-    <div id="preloader">
+      #menu-btn span {
+        pointer-events: none !important;
+      }
+    }
 
-      <div class="loader">
+    /* Contrast fixes (dark theme baseline) */
+    :root:not([data-theme="light"]) .about-service-item p {
+      color: #a3a3a3 !important;
+      font-size: 0.9rem !important;
+    }
 
-        <div class="loader-circle"></div>
+    :root:not([data-theme="light"]) .about-service-icon {
+      color: #737373;
+    }
 
-        <div class="loader-text">
+    /* Remove AI-style background box / mesh grid pattern */
+    .mesh-grid,
+    .grid-lines,
+    .grid-dots {
+      display: none !important;
+    }
+  </style>
+</head>
 
-          <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+<body>
 
-        </div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div id="preloader">
+
+    <div class="loader">
+
+      <div class="loader-circle"></div>
+
+      <div class="loader-text">
+
+        <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
 
       </div>
 
     </div>
 
-    <div id="cursor-dot"></div>
+  </div>
 
-    <div id="cursor-outline"></div>
 
-    <div id="bar"></div>
+  <div id="bar"></div>
 
-    <div class="noise-overlay"></div>
+  <div class="noise-overlay"></div>
 
-    <div class="aurora">
+  <div class="aurora">
 
-      <div class="gradient-sphere sphere-1"></div>
+    <div class="gradient-sphere sphere-1"></div>
 
-      <div class="gradient-sphere sphere-2"></div>
+    <div class="gradient-sphere sphere-2"></div>
 
-      <div class="gradient-sphere sphere-3"></div>
+    <div class="gradient-sphere sphere-3"></div>
 
-      <div class="gradient-sphere sphere-4"></div>
+    <div class="gradient-sphere sphere-4"></div>
 
-    </div>
+  </div>
 
-    <div class="mesh-grid">
 
-      <div class="grid-lines"></div>
+  <!-- Navigation -->
 
-      <div class="grid-dots"></div>
+  <header class="nav" data-scroll-sticky data-scroll-target="#main">
 
-    </div>
+    <div class="nav-container">
 
-    <!-- Navigation -->
+      <a href="#home" class="brand" aria-label="Sanjog Godar, home">
 
-    <header class="nav" data-scroll-sticky data-scroll-target="#main">
+        <div class="brand-icon">
 
-      <div class="nav-container">
+          <img alt="" height="28" src="favicon.png" width="28" />
 
-        <a href="#home" class="brand" aria-label="Sanjog Godar, home">
+        </div>
 
-          <div class="brand-icon">
+        <span class="brand-text">Sanjog Godar</span>
 
-            <img alt="" height="28" src="favicon.png" width="28"/>
+      </a>
 
-          </div>
+      <nav id="menu" aria-label="Primary">
 
-          <span class="brand-text">Sanjog Godar</span>
+        <a href="#about" class="nav-link"><span class="nav-index">01.</span>About</a>
+
+        <a href="#experience" class="nav-link"><span class="nav-index">02.</span>Experience</a>
+
+        <a href="#projects" class="nav-link"><span class="nav-index">03.</span>Projects</a>
+
+        <a href="#skills" class="nav-link"><span class="nav-index">04.</span>Skills</a>
+
+        <a href="#contact" class="nav-link"><span class="nav-index">05.</span>Contact</a>
+
+        <a href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w"
+          class="nav-link nav-resume-mobile">
+          <span class="nav-index">↓</span>Resume
+        </a>
+
+      </nav>
+
+      <div class="nav-cta">
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle theme">
+          <i class="fas fa-sun theme-icon-sun"></i>
+          <i class="fas fa-moon theme-icon-moon"></i>
+        </button>
+
+        <a href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w"
+          class="btn-resume">
+
+          <span class="btn-text">Resume</span>
+
+          <i class="fas fa-download"></i>
 
         </a>
 
-        <nav id="menu" aria-label="Primary">
+      </div>
 
-          <a href="#about" class="nav-link"><span class="nav-index">01.</span>About</a>
+      <button aria-controls="menu" aria-expanded="false" id="menu-btn" class="mobile-menu-btn">
 
-          <a href="#experience" class="nav-link"><span class="nav-index">02.</span>Experience</a>
+        <span></span>
 
-          <a href="#projects" class="nav-link"><span class="nav-index">03.</span>Projects</a>
+        <span></span>
 
-          <a href="#skills" class="nav-link"><span class="nav-index">04.</span>Skills</a>
+        <span></span>
 
-          <a href="#contact" class="nav-link"><span class="nav-index">05.</span>Contact</a>
+      </button>
 
-          <a href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w" class="nav-link nav-resume-mobile">
-            <span class="nav-index">↓</span>Resume
+    </div>
+
+  </header>
+
+  <main id="main">
+
+    <!-- Hero Section -->
+
+    <section id="home" class="hero wrap" data-scroll-section>
+
+      <div class="hero-content" data-scroll data-scroll-speed="1">
+
+        <div class="hero-badge" data-scroll data-scroll-delay="0.1">
+
+          <span class="status-dot"></span>
+
+          <span>Pokhara, Nepal · Available</span>
+
+        </div>
+
+        <div class="hero-greeting" data-scroll data-scroll-delay="0.2">
+
+          <span class="greeting-text">Hi, I'm</span>
+
+        </div>
+
+        <h1 class="hero-title" data-scroll data-scroll-delay="0.3">
+
+          <span class="title-line" data-text="Sanjog Godar">
+
+            <span class="char">S</span><span class="char">a</span><span class="char">n</span><span
+              class="char">j</span><span class="char">o</span><span class="char">g</span>
+
+            <span class="char"> </span>
+
+            <span class="char">G</span><span class="char">o</span><span class="char">d</span><span
+              class="char">a</span><span class="char">r</span>
+
+          </span>
+
+        </h1>
+
+        <div class="hero-subtitle" data-scroll data-scroll-delay="0.4">
+
+          <span class="typing-text">Full Stack Developer</span>
+
+          <span class="cursor-blink">|</span>
+
+        </div>
+
+        <p class="hero-description" data-scroll data-scroll-delay="0.5">
+
+          I build web apps and mobile apps — mostly with Flutter, Next.js, and Laravel.
+          Based in Pokhara, Nepal. I like clean code and straightforward work.
+
+        </p>
+
+        <div class="hero-actions" data-scroll data-scroll-delay="0.6">
+
+          <a class="btn-primary magnetic" href="#projects">
+
+            <span class="btn-bg"></span>
+
+            <span class="btn-text">View My Work</span>
+
+            <svg class="btn-arrow" viewBox="0 0 24 24">
+
+              <path d="M5 12h14M13 6l6 6-6 6" />
+
+            </svg>
+
           </a>
 
-        </nav>
+          <a class="btn-secondary magnetic" href="#contact">
 
-        <div class="nav-cta">
-
-          <a href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w" class="btn-resume">
-
-            <span class="btn-text">Resume</span>
-
-            <i class="fas fa-download"></i>
+            <span class="btn-text">Let's Connect</span>
 
           </a>
 
         </div>
 
-        <button aria-controls="menu" aria-expanded="false" id="menu-btn" class="mobile-menu-btn">
+        <div class="hero-socials" data-scroll data-scroll-delay="0.7">
 
-          <span></span>
+          <div class="social-label">Find me on</div>
 
-          <span></span>
+          <div class="social-links">
 
-          <span></span>
+            <a aria-label="GitHub" href="https://github.com/Sanjog-Godar" class="social-link">
 
-        </button>
-
-      </div>
-
-    </header>
-
-    <main id="main">
-
-      <!-- Hero Section -->
-
-      <section id="home" class="hero wrap" data-scroll-section>
-
-        <div class="hero-content" data-scroll data-scroll-speed="1">
-
-          <div class="hero-badge" data-scroll data-scroll-delay="0.1">
-
-            <span class="status-dot"></span>
-
-            <span>Pokhara, Nepal · Available</span>
-
-          </div>
-
-          <div class="hero-greeting" data-scroll data-scroll-delay="0.2">
-
-            <span class="greeting-text">Hi, I'm</span>
-
-          </div>
-
-          <h1 class="hero-title" data-scroll data-scroll-delay="0.3">
-
-            <span class="title-line" data-text="Sanjog Godar">
-
-              <span class="char">S</span><span class="char">a</span><span class="char">n</span><span class="char">j</span><span class="char">o</span><span class="char">g</span>
-
-              <span class="char"> </span>
-
-              <span class="char">G</span><span class="char">o</span><span class="char">d</span><span class="char">a</span><span class="char">r</span>
-
-            </span>
-
-          </h1>
-
-          <div class="hero-subtitle" data-scroll data-scroll-delay="0.4">
-
-            <span class="typing-text">Full Stack Developer</span>
-
-            <span class="cursor-blink">|</span>
-
-          </div>
-
-          <p class="hero-description" data-scroll data-scroll-delay="0.5">
-
-            I build web apps and mobile apps — mostly with Flutter, Next.js, and Laravel.
-            Based in Pokhara, Nepal. I like clean code and straightforward work.
-
-          </p>
-
-          <div class="hero-actions" data-scroll data-scroll-delay="0.6">
-
-            <a class="btn-primary magnetic" href="#projects">
-
-              <span class="btn-bg"></span>
-
-              <span class="btn-text">View My Work</span>
-
-              <svg class="btn-arrow" viewBox="0 0 24 24">
-
-                <path d="M5 12h14M13 6l6 6-6 6"/>
-
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z" />
               </svg>
 
-            </a>
-
-            <a class="btn-secondary magnetic" href="#contact">
-
-              <span class="btn-text">Let's Connect</span>
+              <span>GitHub</span>
 
             </a>
 
-          </div>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar" class="social-link">
 
-          <div class="hero-socials" data-scroll data-scroll-delay="0.7">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z" />
+              </svg>
 
-            <div class="social-label">Find me on</div>
+              <span>LinkedIn</span>
 
-            <div class="social-links">
+            </a>
 
-              <a aria-label="GitHub" href="https://github.com/Sanjog-Godar" class="social-link">
+            <a aria-label="Email" href="mailto:Sanjog.godar2058@gmail.com" class="social-link">
 
-                <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z" />
+              </svg>
 
-                <span>GitHub</span>
+              <span>Email</span>
 
-              </a>
-
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar" class="social-link">
-
-                <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"/></svg>
-
-                <span>LinkedIn</span>
-
-              </a>
-
-              <a aria-label="Email" href="mailto:Sanjog.godar2058@gmail.com" class="social-link">
-
-                <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z"/></svg>
-
-                <span>Email</span>
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="hero-visual">
-
-          <div class="hero-portrait">
-
-            <!-- Clean photo frame -->
-            <div class="portrait-frame">
-              <img
-                class="portrait-img"
-                src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767021513/developer_l80iq8.jpg"
-                alt="Sanjog Godar — Full Stack Developer"
-                loading="eager"
-              />
-              <!-- Subtle gradient overlay at bottom -->
-              <div class="portrait-overlay"></div>
-            </div>
-
-            <!-- Floating info card — bottom left of photo -->
-            <div class="portrait-card">
-              <div class="portrait-card-dot"></div>
-              <div class="portrait-card-text">
-                <span class="portrait-card-name">Sanjog Godar</span>
-                <span class="portrait-card-role">Full-stack Developer</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="scroll-indicator">
-          <div class="scroll-text">Scroll to explore</div>
-          <div class="scroll-arrow">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-          </div>
-        </div>
-
-      </section>
-
-      <div class="tech-marquee" aria-hidden="true">
-
-        <div class="marquee-content">
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
-
-            <span>Flutter</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-js"></i>
-
-            <span>JavaScript</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.939 17.801L7.227 6.136H6.136V17.864H7.97V7.545L14.732 17.801H14.939ZM17.864 17.864V6.136H16.03V17.864H17.864Z" /></svg>
-
-            <span>Next.js</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-laravel"></i>
-
-            <span>Laravel</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424c-.12.15-.1.36.04.486a.4.4 0 0 0 .282.117H12v8.96a.396.396 0 0 0 .716.233l9.081-12.261a.4.4 0 0 0-.435-.605z" fill="currentColor"/></svg>
-
-            <span>Supabase</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-react"></i>
-
-            <span>React</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fas fa-database"></i>
-
-            <span>MySQL</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-node-js"></i>
-
-            <span>Node.js</span>
-
-          </div>
-
-  
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
-
-            <span>Flutter</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-js"></i>
-
-            <span>JavaScript</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.939 17.801L7.227 6.136H6.136V17.864H7.97V7.545L14.732 17.801H14.939ZM17.864 17.864V6.136H16.03V17.864H17.864Z" /></svg>
-
-            <span>Next.js</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-laravel"></i>
-
-            <span>Laravel</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424c-.12.15-.1.36.04.486a.4.4 0 0 0 .282.117H12v8.96a.396.396 0 0 0 .716.233l9.081-12.261a.4.4 0 0 0-.435-.605z" fill="currentColor"/></svg>
-
-            <span>Supabase</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-react"></i>
-
-            <span>React</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fas fa-database"></i>
-
-            <span>MySQL</span>
-
-          </div>
-
-          <div class="marquee-item">
-
-            <i class="fab fa-node-js"></i>
-
-            <span>Node.js</span>
+            </a>
 
           </div>
 
@@ -481,262 +346,526 @@
 
       </div>
 
-      <!-- About Section -->
+      <div class="hero-visual">
 
-      <section id="about" class="about-section wrap">
+        <div class="hero-portrait">
 
-        <!-- Section label -->
-        <div class="about-label" data-r="">
-          <span class="about-eyebrow">About me</span>
+          <!-- Clean photo frame -->
+          <div class="portrait-frame">
+            <img class="portrait-img"
+              src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767021513/developer_l80iq8.jpg"
+              alt="Sanjog Godar — Full Stack Developer" loading="eager" />
+            <!-- Subtle gradient overlay at bottom -->
+            <div class="portrait-overlay"></div>
+          </div>
+
+          <!-- Floating info card — bottom left of photo -->
+          <div class="portrait-card">
+            <div class="portrait-card-dot"></div>
+            <div class="portrait-card-text">
+              <span class="portrait-card-name">Sanjog Godar</span>
+              <span class="portrait-card-role">Full-stack Developer</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="about-grid" data-scroll data-scroll-class="in-view">
+      </div>
 
-          <!-- Left: Photo column -->
-          <div class="about-photo-col" data-r="">
-            <div class="about-photo-wrap">
-              <img
-                class="about-photo"
-                src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767021513/developer_l80iq8.jpg"
-                alt="Sanjog Godar"
-                loading="lazy"
-              />
-              <!-- Floating status badge -->
-              <div class="about-status-badge">
-                <span class="about-status-dot"></span>
-                <span>Open to work</span>
-              </div>
-            </div>
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </div>
 
-            <!-- Stats row -->
-            <div class="about-stats">
-              <div class="about-stat">
-                <strong>1+</strong>
-                <span>Years experience</span>
-              </div>
-              <div class="about-stat">
-                <strong>10+</strong>
-                <span>Projects shipped</span>
-              </div>
-              <div class="about-stat">
-                <strong>3</strong>
-                <span>Apps on Play Store</span>
-              </div>
+    </section>
+
+    <div class="tech-marquee" aria-hidden="true">
+
+      <div class="marquee-content">
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z" />
+          </svg>
+
+          <span>Flutter</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-js"></i>
+
+          <span>JavaScript</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.939 17.801L7.227 6.136H6.136V17.864H7.97V7.545L14.732 17.801H14.939ZM17.864 17.864V6.136H16.03V17.864H17.864Z" />
+          </svg>
+
+          <span>Next.js</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-laravel"></i>
+
+          <span>Laravel</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424c-.12.15-.1.36.04.486a.4.4 0 0 0 .282.117H12v8.96a.396.396 0 0 0 .716.233l9.081-12.261a.4.4 0 0 0-.435-.605z"
+              fill="currentColor" />
+          </svg>
+
+          <span>Supabase</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-react"></i>
+
+          <span>React</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fas fa-database"></i>
+
+          <span>MySQL</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-node-js"></i>
+
+          <span>Node.js</span>
+
+        </div>
+
+
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z" />
+          </svg>
+
+          <span>Flutter</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-js"></i>
+
+          <span>JavaScript</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM14.939 17.801L7.227 6.136H6.136V17.864H7.97V7.545L14.732 17.801H14.939ZM17.864 17.864V6.136H16.03V17.864H17.864Z" />
+          </svg>
+
+          <span>Next.js</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-laravel"></i>
+
+          <span>Laravel</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424c-.12.15-.1.36.04.486a.4.4 0 0 0 .282.117H12v8.96a.396.396 0 0 0 .716.233l9.081-12.261a.4.4 0 0 0-.435-.605z"
+              fill="currentColor" />
+          </svg>
+
+          <span>Supabase</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-react"></i>
+
+          <span>React</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fas fa-database"></i>
+
+          <span>MySQL</span>
+
+        </div>
+
+        <div class="marquee-item">
+
+          <i class="fab fa-node-js"></i>
+
+          <span>Node.js</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- About Section -->
+
+    <section id="about" class="about-section wrap">
+
+      <!-- Section label -->
+      <div class="about-label" data-r="">
+        <span class="about-eyebrow">About me</span>
+      </div>
+
+      <div class="about-grid" data-scroll data-scroll-class="in-view">
+
+        <!-- Left: Photo column -->
+        <div class="about-photo-col" data-r="">
+          <div class="about-photo-wrap">
+            <img class="about-photo"
+              src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767021513/developer_l80iq8.jpg"
+              alt="Sanjog Godar" loading="lazy" />
+            <!-- Floating status badge -->
+            <div class="about-status-badge">
+              <span class="about-status-dot"></span>
+              <span>Open to work</span>
             </div>
           </div>
 
-          <!-- Right: Content column -->
-          <div class="about-content-col" data-r="">
-
-            <div class="about-heading">
-              <p class="about-eyebrow-right">Full-stack Developer · Pokhara, Nepal</p>
-              <h2 class="about-title">Building things<br>that <em>actually work</em></h2>
+          <!-- Stats row -->
+          <div class="about-stats">
+            <div class="about-stat">
+              <strong>1+</strong>
+              <span>Years experience</span>
             </div>
-
-            <div class="about-bio">
-              <p>I'm a full-stack developer focused on Flutter, Next.js, and Laravel. I started with BSc.CSIT at Tribhuvan University and got hands-on experience at Websoft Technology Nepal. Now I work independently — client projects and my own apps.</p>
-              <p>I'm the kind of developer who'd rather ask one extra question up front than guess and redo. Clean code, honest timelines, and things that actually ship.</p>
+            <div class="about-stat">
+              <strong>4+</strong>
+              <span>Projects shipped</span>
             </div>
-
-            <!-- Quick info grid -->
-            <div class="about-info-grid">
-              <div class="about-info-item">
-                <span class="about-info-label">Location</span>
-                <span class="about-info-value">Pokhara, Nepal</span>
-              </div>
-              <div class="about-info-item">
-                <span class="about-info-label">Education</span>
-                <span class="about-info-value">B.Sc CSIT, TU</span>
-              </div>
-              <div class="about-info-item">
-                <span class="about-info-label">Languages</span>
-                <span class="about-info-value">English, Nepali, Hindi</span>
-              </div>
-              <div class="about-info-item">
-                <span class="about-info-label">Email</span>
-                <span class="about-info-value">
-                  <a href="mailto:sanjog.godar2058@gmail.com">sanjog.godar2058@gmail.com</a>
-                </span>
-              </div>
+            <div class="about-stat">
+              <strong>2</strong>
+              <span>Apps on Play Store</span>
             </div>
-
-            <!-- CV download -->
-            <a
-              class="about-cv-btn"
-              href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w"
-              id="download-cv-about"
-            >
-              <i class="fas fa-download" aria-hidden="true"></i>
-              Download CV
-            </a>
-
           </div>
         </div>
 
-        <!-- Services strip -->
-        <div class="about-services" data-scroll data-scroll-class="in-view">
-          <div class="about-service-item">
-            <div class="about-service-icon"><i class="fas fa-code"></i></div>
-            <div>
-              <h4>Web Development</h4>
-              <p>Next.js, Laravel, Livewire — built for performance and real users.</p>
+        <!-- Right: Content column -->
+        <div class="about-content-col" data-r="">
+
+          <div class="about-heading">
+            <p class="about-eyebrow-right">Full-stack Developer · Pokhara, Nepal</p>
+            <h2 class="about-title">Building things<br>that <em>actually work</em></h2>
+          </div>
+
+          <div class="about-bio">
+            <p>I'm a full-stack developer focused on Flutter, Next.js, and Laravel. I started with BSc.CSIT at Tribhuvan
+              University and got hands-on experience at Websoft Technology Nepal. Now I work independently — client
+              projects and my own apps.</p>
+            <p>I'm the kind of developer who'd rather ask one extra question up front than guess and redo. Clean code,
+              honest timelines, and things that actually ship.</p>
+          </div>
+
+          <!-- Quick info grid -->
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <span class="about-info-label">Location</span>
+              <span class="about-info-value">Pokhara, Nepal</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Education</span>
+              <span class="about-info-value">B.Sc CSIT, TU</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Languages</span>
+              <span class="about-info-value">English, Nepali, Hindi</span>
+            </div>
+            <div class="about-info-item">
+              <span class="about-info-label">Email</span>
+              <span class="about-info-value">
+                <a href="mailto:sanjog.godar2058@gmail.com">sanjog.godar2058@gmail.com</a>
+              </span>
             </div>
           </div>
-          <div class="about-service-item">
-            <div class="about-service-icon"><i class="fas fa-mobile-alt"></i></div>
-            <div>
-              <h4>Mobile Apps</h4>
-              <p>Flutter for Android & iOS. Apps live on the Play Store.</p>
-            </div>
+
+          <!-- CV download -->
+          <a class="about-cv-btn"
+            href="https://drive.google.com/uc?export=download&amp;id=1MSYB8BnOpT9awGJkHt79iUnKhlK-Ek8w"
+            id="download-cv-about">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            Download CV
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Services strip -->
+      <div class="about-services" data-scroll data-scroll-class="in-view">
+        <div class="about-service-item">
+          <div class="about-service-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h4>Web Development</h4>
+            <p>Next.js, Laravel, Livewire — built for performance and real users.</p>
           </div>
-          <div class="about-service-item">
-            <div class="about-service-icon"><i class="fas fa-server"></i></div>
-            <div>
-              <h4>Backend & APIs</h4>
-              <p>Laravel, MySQL, Firebase and Supabase for real-time data.</p>
-            </div>
+        </div>
+        <div class="about-service-item">
+          <div class="about-service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div>
+            <h4>Mobile Apps</h4>
+            <p>Flutter for Android & iOS. Apps live on the Play Store.</p>
           </div>
-          <div class="about-service-item">
-            <div class="about-service-icon"><i class="fas fa-chart-line"></i></div>
-            <div>
-              <h4>Trading Tools</h4>
-              <p>Pine Script & MQL5 strategies. Systematic, rule-based.</p>
+        </div>
+        <div class="about-service-item">
+          <div class="about-service-icon"><i class="fas fa-server"></i></div>
+          <div>
+            <h4>Backend & APIs</h4>
+            <p>Laravel, MySQL, Firebase and Supabase for real-time data.</p>
+          </div>
+        </div>
+        <div class="about-service-item">
+          <div class="about-service-icon"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <h4>Trading Tools</h4>
+            <p>Pine Script & MQL5 strategies. Systematic, rule-based.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Experience Section -->
+
+    <section id="experience" class="sec wrap" data-scroll-section>
+
+      <div class="head" data-scroll data-scroll-class="in-view">
+        <p class="eyebrow mono">Career Path</p>
+        <h2>Work <em>experience</em></h2>
+      </div>
+
+      <div class="exp-timeline">
+
+        <div class="exp-item" data-scroll data-scroll-class="in-view">
+          <div class="exp-date">
+            <span>2025 &mdash; Present</span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Mobile Application Developer</h3>
+              <span class="exp-company">Websoft Technology Nepal Pvt Ltd.</span>
+            </div>
+            <div class="exp-desc">
+              <p>Developing robust, cross-platform Android applications using Flutter for various client projects.</p>
+              <ul>
+                <li>Architected and built new feature modules, integrating RESTful APIs and Firebase services.</li>
+                <li>Conducted performance profiling, bug fixing, and strict UI polishing for production releases.</li>
+                <li>Collaborated tightly with design teams and backend engineers to ensure timely delivery of sprint
+                  goals.</li>
+              </ul>
+            </div>
+            <div class="exp-skills">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>REST API</span>
+              <span>Firebase</span>
             </div>
           </div>
         </div>
 
-      </section>
+      </div>
 
-            <!-- Experience Section -->
+    </section>
 
-      <section id="experience" class="sec wrap" data-scroll-section>
+    <!-- Projects Section -->
 
+    <section id="projects" class="sec wrap">
+
+      <div class="projects-header-row">
         <div class="head" data-scroll data-scroll-class="in-view">
-          <p class="eyebrow mono">Career Path</p>
-          <h2>Work <em>experience</em></h2>
-        </div>
-
-        <div class="exp-timeline">
-          
-          <div class="exp-item" data-scroll data-scroll-class="in-view">
-            <div class="exp-date">
-              <span>2025 &mdash; Present</span>
-            </div>
-            <div class="exp-content">
-              <div class="exp-header">
-                <h3>Mobile Application Developer</h3>
-                <span class="exp-company">Websoft Technology Nepal Pvt Ltd.</span>
-              </div>
-              <div class="exp-desc">
-                <p>Developing robust, cross-platform Android applications using Flutter for various client projects.</p>
-                <ul>
-                  <li>Architected and built new feature modules, integrating RESTful APIs and Firebase services.</li>
-                  <li>Conducted performance profiling, bug fixing, and strict UI polishing for production releases.</li>
-                  <li>Collaborated tightly with design teams and backend engineers to ensure timely delivery of sprint goals.</li>
-                </ul>
-              </div>
-              <div class="exp-skills">
-                <span>Flutter</span>
-                <span>Dart</span>
-                <span>REST API</span>
-                <span>Firebase</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Projects Section -->
-
-      <section id="projects" class="sec wrap">
-
-        <div class="head" data-scroll data-scroll-class="in-view">
-
           <p class="eyebrow mono">Portfolio</p>
-
           <h2>Featured <span class="g">projects</span></h2>
-
         </div>
 
-        <div class="projects-list">
+        <div class="projects-nav-controls">
+          <div class="projects-counter mono">
+            <span id="project-current-index">01</span>
+            <span class="sep">/</span>
+            <span class="total">04</span>
+          </div>
+        </div>
+      </div>
 
-          <!-- Project 1 -->
-          <article class="project-item" data-scroll data-scroll-class="in-view">
-            <div class="project-visual">
-              <img alt="Maps for Clash App screenshot" loading="lazy" src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767091459/1_p28sbe.png"/>
+      <!-- Quick Navigation Tabs -->
+      <div class="projects-tabs" role="tablist" aria-label="Featured projects switcher">
+        <button class="project-tab active" data-index="0" role="tab" aria-selected="true">
+          <span class="tab-num">01</span> Maps for Clash App
+        </button>
+        <button class="project-tab" data-index="1" role="tab" aria-selected="false">
+          <span class="tab-num">02</span> Maps for Clash Web
+        </button>
+        <button class="project-tab" data-index="2" role="tab" aria-selected="false">
+          <span class="tab-num">03</span> LASHXTEND Studio
+        </button>
+        <button class="project-tab" data-index="3" role="tab" aria-selected="false">
+          <span class="tab-num">04</span> DEARSKIN Clinic
+        </button>
+      </div>
+
+      <!-- Horizontal Showcase Slider with Side Navigation -->
+      <div class="projects-slider-wrapper">
+        <button class="slider-side-btn prev" id="proj-prev" aria-label="Previous project" title="Previous project">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="projects-slider" id="projects-slider">
+
+          <!-- Slide 1 -->
+          <article class="project-card" data-index="0">
+            <div class="project-card-visual">
+              <div class="image-frame">
+                <img alt="Maps for Clash App screenshot" loading="lazy"
+                  src="https://res.cloudinary.com/dgplvqtb7/image/upload/v1767091459/1_p28sbe.png" />
+              </div>
             </div>
-            <div class="project-content">
-              <div class="project-tags">
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-badge">01 · Mobile Application</span>
+              </div>
+              <h3 class="project-card-title">Maps for Clash Apps</h3>
+              <div class="project-card-tags">
                 <span>Flutter</span><span>Dart</span><span>Supabase</span><span>Firebase</span>
               </div>
-              <h3 class="project-title">Maps for Clash</h3>
-              <p class="project-desc">A full-featured Clash of Clans base copy application serving thousands of active users, complete with a real-time global chat system.</p>
-              <div class="project-links">
-                <a href="https://play.google.com/store/apps/details?id=com.sanjog.clash_of_bases" target="_blank" rel="noopener"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live App</a>
-                <a href="privacy-policy.html"><i aria-hidden="true" class="fas fa-shield-alt"></i> Privacy</a>
+              <p class="project-card-desc">A full-featured Clash of Clans base copy application serving thousands of active
+                users, complete with a real-time global chat system and instant layout copying.</p>
+              <div class="project-card-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sanjog.clash_of_bases" target="_blank"
+                  rel="noopener" class="btn-project-primary"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live App</a>
+                <a href="privacy-policy.html" class="btn-project-secondary"><i aria-hidden="true" class="fas fa-shield-alt"></i> Privacy Policy</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-item" data-scroll data-scroll-class="in-view">
-            <div class="project-visual">
-              <img alt="Vehicle attendance dashboard" loading="lazy" src="https://res.cloudinary.com/dlevkebqx/image/upload/v1768663955/pngtree-big-isolated-vehicle-vector-colorful-icons-flat-illustrations-of-delivery-by-png-image_7255237_kmleud.jpg"/>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
-              </div>
-              <h3 class="project-title">Fleet Tracker</h3>
-              <p class="project-desc">A responsive dashboard built for a logistics client to track daily vehicle attendance, kilometer logs, and automate fuel bill calculations.</p>
-              <div class="project-links">
-                <a href="https://vehiclemgmt.vercel.app" target="_blank" rel="noopener"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="https://github.com/Sanjog-Godar/Automation/tree/main/Vehicle_Attendance" target="_blank" rel="noopener"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+          <!-- Slide 2 -->
+          <article class="project-card" data-index="1">
+            <div class="project-card-visual">
+              <div class="image-frame">
+                <img alt="Maps for Clash Website screenshot" loading="lazy" src="maps_website.webp" />
               </div>
             </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-item" data-scroll data-scroll-class="in-view">
-            <div class="project-visual">
-              <img alt="Social Media App" loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600"/>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span>React Native</span><span>Firebase</span><span>Redux</span>
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-badge">02 · Web Platform</span>
               </div>
-              <h3 class="project-title">Social Connect</h3>
-              <p class="project-desc">A modern social networking platform with real-time messaging, post sharing, and secure user authentication flows.</p>
-              <div class="project-links">
-                <a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+              <h3 class="project-card-title">Maps for Clash Website</h3>
+              <div class="project-card-tags">
+                <span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Supabase</span>
+              </div>
+              <p class="project-card-desc">A full-featured Clash of Clans base copy web platform serving active gamers worldwide, optimized for fast loading and community layout sharing.</p>
+              <div class="project-card-links">
+                <a href="https://mapsforclash.com/" target="_blank" rel="noopener" class="btn-project-primary">
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Website
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 4 -->
-          <article class="project-item" data-scroll data-scroll-class="in-view">
-            <div class="project-visual">
-              <img alt="Fitness Tracking App" loading="lazy" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600"/>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span>Flutter</span><span>Dart</span><span>Riverpod</span>
+          <!-- Slide 3 -->
+          <article class="project-card" data-index="2">
+            <div class="project-card-visual">
+              <div class="image-frame">
+                <img alt="LASHXTEND SPMU Studio screenshot" loading="lazy" src="lashxtend.webp" />
               </div>
-              <h3 class="project-title">Fitness Tracker</h3>
-              <p class="project-desc">Mobile fitness application featuring interactive workout tracking, custom nutrition planning, and visual progress analytics.</p>
-              <div class="project-links">
-                <a href="#"><i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#"><i aria-hidden="true" class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-badge">03 · Commercial Web & CMS</span>
+              </div>
+              <h3 class="project-card-title">LASHXTEND SPMU STUDIO</h3>
+              <div class="project-card-tags">
+                <span>Laravel</span><span>Filament</span><span>PHP</span><span>Tailwind CSS</span>
+              </div>
+              <p class="project-card-desc">Nepal's premium destination for lash extensions, microblading, lip blush, and SPMU services. Engineered with custom Filament admin dashboards for effortless content management.</p>
+              <div class="project-card-links">
+                <a href="https://www.lashxtend-dearskin.com/lashxtend" target="_blank" rel="noopener" class="btn-project-primary">
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Website
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="project-card" data-index="3">
+            <div class="project-card-visual">
+              <div class="image-frame">
+                <img alt="DEARSKIN Aesthetic Clinic screenshot" loading="lazy" src="dearskin.webp" />
+              </div>
+            </div>
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span class="project-badge">04 · Medical Aesthetic Clinic</span>
+              </div>
+              <h3 class="project-card-title">DEARSKIN</h3>
+              <div class="project-card-tags">
+                <span>Laravel</span><span>Filament</span><span>PHP</span><span>Tailwind CSS</span>
+              </div>
+              <p class="project-card-desc">Experience Nepal's premier aesthetic clinic for medical-grade HydraFacials, laser therapy, and bespoke skincare. Built with clean aesthetics, quick booking actions, and fluid responsive layouts.</p>
+              <div class="project-card-links">
+                <a href="https://www.lashxtend-dearskin.com/dearskin" target="_blank" rel="noopener" class="btn-project-primary">
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i> Live Website
+                </a>
               </div>
             </div>
           </article>
 
         </div>
 
-           <!-- Skills Section -->
+        <button class="slider-side-btn next" id="proj-next" aria-label="Next project" title="Next project">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Slider Indicator Bars -->
+      <div class="slider-dots" role="tablist" aria-label="Project slide indicator">
+        <button class="slider-dot active" data-index="0" aria-label="Go to project 1"></button>
+        <button class="slider-dot" data-index="1" aria-label="Go to project 2"></button>
+        <button class="slider-dot" data-index="2" aria-label="Go to project 3"></button>
+        <button class="slider-dot" data-index="3" aria-label="Go to project 4"></button>
+      </div>
+
+    </section>
+
+      <!-- Skills Section -->
       <section id="skills" class="skills-section sec wrap">
         <div class="head" data-scroll data-scroll-class="in-view">
           <p class="eyebrow mono">My expertise</p>
@@ -758,7 +887,8 @@
                     <span>Flutter</span>
                     <span class="skill-prof mono">Daily use</span>
                   </div>
-                  <p>Shipped 3 production apps. I rely heavily on Riverpod for state management and custom animations.</p>
+                  <p>Shipped 3 production apps. I rely heavily on Riverpod for state management and custom animations.
+                  </p>
                 </div>
               </li>
               <li class="skill-item">
@@ -768,7 +898,8 @@
                     <span>Firebase</span>
                     <span class="skill-prof mono">Comfortable</span>
                   </div>
-                  <p>My go-to backend for mobile. Auth, Firestore, and Cloud Functions to get prototypes moving fast.</p>
+                  <p>My go-to backend for mobile. Auth, Firestore, and Cloud Functions to get prototypes moving fast.
+                  </p>
                 </div>
               </li>
               <li class="skill-item">
@@ -806,7 +937,8 @@
                     <span>Next.js</span>
                     <span class="skill-prof mono">Familiar</span>
                   </div>
-                  <p>Layout inspiration: Brian Lovin's portfolio, but built my own way with the App Router and server actions.</p>
+                  <p>Layout inspiration: Brian Lovin's portfolio, but built my own way with the App Router and server
+                    actions.</p>
                 </div>
               </li>
               <li class="skill-item">
@@ -904,7 +1036,8 @@
                     <span>MQL5</span>
                     <span class="skill-prof mono">Comfortable</span>
                   </div>
-                  <p>Built over 15 automated trading bots for MetaTrader 5, handling live execution and risk management.</p>
+                  <p>Built over 15 automated trading bots for MetaTrader 5, handling live execution and risk management.
+                  </p>
                 </div>
               </li>
               <li class="skill-item">
@@ -971,14 +1104,17 @@
           <div class="s3" data-r="">
             <p class="eyebrow mono">Contact</p>
             <h2 class="big">Let's <span class="g">build together</span></h2>
-            <p style="color:var(--mute);max-width:30rem;margin-top:1rem;margin-bottom:2rem;line-height:1.6;">I'm currently available for new projects and full-time opportunities. If you're looking for a developer to ship scalable web or mobile apps, send me a message.</p>
+            <p style="color:var(--mute);max-width:30rem;margin-top:1rem;margin-bottom:2rem;line-height:1.6;">I'm
+              currently available for new projects and full-time opportunities. If you're looking for a developer to
+              ship scalable web or mobile apps, send me a message.</p>
 
             <div class="cl">
               <div>
                 <b class="cic"><i aria-hidden="true" class="fas fa-envelope"></i></b>
                 <span>
                   <small>Email</small>
-                  <a href="mailto:sanjog.godar2058@gmail.com" style="color:inherit;text-decoration:none;">sanjog.godar2058@gmail.com</a>
+                  <a href="mailto:sanjog.godar2058@gmail.com"
+                    style="color:inherit;text-decoration:none;">sanjog.godar2058@gmail.com</a>
                 </span>
               </div>
               <div>
@@ -986,7 +1122,8 @@
                 <span>
                   <small>Phone</small>
                   <span>
-                    <img alt="Nepal" height="18" src="https://flagcdn.com/w20/np.png" style="display:inline;margin-right:.45rem;vertical-align:text-bottom" width="14"/>
+                    <img alt="Nepal" height="18" src="https://flagcdn.com/w20/np.png"
+                      style="display:inline;margin-right:.45rem;vertical-align:text-bottom" width="14" />
                     +977 9806514021
                   </span>
                 </span>
@@ -1002,21 +1139,37 @@
 
             <h3 style="font-size:1.05rem;margin-bottom:.8rem;margin-top:2rem">Connect online</h3>
             <div class="soc" style="margin-top:0">
-              <a aria-label="GitHub" href="https://github.com/Sanjog-Godar" target="_blank" rel="noopener"><svg viewbox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"></path></svg></a>
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar" target="_blank" rel="noopener"><svg viewbox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"></path></svg></a>
-              <a aria-label="Email" href="mailto:sanjog.godar2058@gmail.com"><svg viewbox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z"></path></svg></a>
+              <a aria-label="GitHub" href="https://github.com/Sanjog-Godar" target="_blank" rel="noopener"><svg
+                  viewbox="0 0 24 24">
+                  <path
+                    d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z">
+                  </path>
+                </svg></a>
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sanjog-godar" target="_blank"
+                rel="noopener"><svg viewbox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z">
+                  </path>
+                </svg></a>
+              <a aria-label="Email" href="mailto:sanjog.godar2058@gmail.com"><svg viewbox="0 0 24 24">
+                  <path
+                    d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 13l7.5-5.9V7z">
+                  </path>
+                </svg></a>
             </div>
           </div>
 
           <form id="contact-form" class="card sp s3" data-r="" style="--rd:.1s">
-            <label>Name<input autocomplete="name" id="name" name="name" required="" type="text"/></label>
-            <label>Email<input autocomplete="email" id="email" name="email" required="" type="email"/></label>
-            <label>Subject<input id="subject" name="subject" required="" type="text"/></label>
+            <label>Name<input autocomplete="name" id="name" name="name" required="" type="text" /></label>
+            <label>Email<input autocomplete="email" id="email" name="email" required="" type="email" /></label>
+            <label>Subject<input id="subject" name="subject" required="" type="text" /></label>
             <label>Message<textarea id="message" name="message" required="" rows="5"></textarea></label>
-            
+
             <!-- Upgraded Send Button with explicit contrast colors -->
-            <button class="btn solid mag" style="justify-content:center; background-color: #f5f5f5; color: #0a0a0a; font-weight: 600; border: none; border-radius: 8px; padding: 12px 24px; transition: opacity 0.2s; margin-top: 8px;" type="submit" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-              <i aria-hidden="true" class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send message 
+            <button class="btn solid mag"
+              style="justify-content:center; background-color: #f5f5f5; color: #0a0a0a; font-weight: 600; border: none; border-radius: 8px; padding: 12px 24px; transition: opacity 0.2s; margin-top: 8px;"
+              type="submit" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+              <i aria-hidden="true" class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send message
             </button>
             <p id="form-note" role="status" style="margin-top: 12px; font-size: 0.9rem;"></p>
           </form>
@@ -1025,35 +1178,35 @@
 
       </section>
 
-    </main>
+  </main>
 
-    <!-- 404 Error Page -->
+  <!-- 404 Error Page -->
 
-    <section id="error-404" class="wrap" hidden="">
+  <section id="error-404" class="wrap" hidden="">
 
-      <p class="code g">404</p>
+    <p class="code g">404</p>
 
-      <h2>Page Not Found</h2>
+    <h2>Page Not Found</h2>
 
-      <p style="color:var(--mute)">Oops! The page you're looking for doesn't exist on this domain.</p>
+    <p style="color:var(--mute)">Oops! The page you're looking for doesn't exist on this domain.</p>
 
-      <p class="url mono"><span id="error-url"></span></p>
+    <p class="url mono"><span id="error-url"></span></p>
 
-      <p style="color:var(--mute);font-size:.95rem">Error Code: 404 - Not Found</p>
+    <p style="color:var(--mute);font-size:.95rem">Error Code: 404 - Not Found</p>
 
-      <div class="row" style="margin-top:1rem">
+    <div class="row" style="margin-top:1rem">
 
-        <a class="btn solid" href="#home">Back to Home</a>
+      <a class="btn solid" href="#home">Back to Home</a>
 
-        <a class="btn" href="#projects">View Projects</a>
+      <a class="btn" href="#projects">View Projects</a>
 
-      </div>
+    </div>
 
-    </section>
+  </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
 
-    <!-- <footer style="background: #0a0a0a;" class="text-white py-8 sm:py-12 border-t border-cyan-400/20">
+  <!-- <footer style="background: #0a0a0a;" class="text-white py-8 sm:py-12 border-t border-cyan-400/20">
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
@@ -1075,20 +1228,23 @@
 
     </footer> -->
 
-    <footer class="foot">© Sanjog Godar · Pokhara, Nepal<span style="display:block;margin-top:.5rem;font-size:.85rem"><a href="privacy-policy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy Policy</a> · <a href="account-deletion.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Account Deletion</a></span></footer>
+  <footer class="foot">© Sanjog Godar · Pokhara, Nepal<span style="display:block;margin-top:.5rem;font-size:.85rem"><a
+        href="privacy-policy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacy
+        Policy</a> · <a href="account-deletion.html"
+        style="color:inherit;text-decoration:underline;text-underline-offset:3px">Account Deletion</a></span></footer>
 
-    <!-- Back to Top Button -->
+  <!-- Back to Top Button -->
 
-    <button aria-label="Back to top" hidden="" id="top"><i aria-hidden="true" class="fas fa-arrow-up"></i></button>
+  <button aria-label="Back to top" hidden="" id="top"><i aria-hidden="true" class="fas fa-arrow-up"></i></button>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
-  </body>
+</body>
 
 </html>

@@ -148,13 +148,13 @@ body {
 
   overflow-x: hidden;
 
-  cursor: none;
+  cursor: auto;
 
 }
 
 /* Custom Cursor */
 
-#cursor-dot {
+#cursor-dot { display: none !important;
 
   position: fixed;
 
@@ -184,7 +184,7 @@ body {
 
 
 
-#cursor-outline {
+#cursor-outline { display: none !important;
 
   position: fixed;
 
@@ -2997,7 +2997,7 @@ form textarea:focus {
   gap: 0.4em !important;
 }
 
-.nav-index {
+:root:not([data-theme="light"]) .nav-index {
   font-size: 0.65rem !important;
   opacity: 0.5 !important;
   letter-spacing: 0;
@@ -3011,7 +3011,7 @@ form textarea:focus {
   letter-spacing: 0.01em;
 }
 
-/* Hero subtitle — role text should feel casual */
+/* Hero subtitle ï¿½ role text should feel casual */
 .hero-subtitle {
   font-family: var(--font-secondary) !important;
   font-size: 1.25rem !important;
@@ -3020,7 +3020,7 @@ form textarea:focus {
   letter-spacing: 0 !important;
 }
 
-/* Description — more readable leading */
+/* Description ï¿½ more readable leading */
 .hero-description {
   font-size: 1.05rem !important;
   line-height: 1.75 !important;
@@ -3029,7 +3029,7 @@ form textarea:focus {
   font-weight: 400;
 }
 
-/* Buttons — primary should not be rainbow gradient */
+/* Buttons ï¿½ primary should not be rainbow gradient */
 .btn-primary {
   background: #7c6af7 !important;
   border-radius: 8px !important;
@@ -3039,20 +3039,20 @@ form textarea:focus {
   background: #6b58e8 !important;
 }
 
-.btn-secondary {
+:root:not([data-theme="light"]) .btn-secondary {
   border-radius: 8px !important;
   border-color: rgba(255,255,255,0.12) !important;
 }
 
-/* Resume button — pill shape is too templated, use square-ish */
+/* Resume button ï¿½ pill shape is too templated, use square-ish */
 .btn-resume {
   border-radius: 8px !important;
   font-size: 0.8rem !important;
   letter-spacing: 0.02em;
 }
 
-/* Brand text — should feel handcrafted, not perfect */
-.brand-text {
+/* Brand text ï¿½ should feel handcrafted, not perfect */
+:root:not([data-theme="light"]) .brand-text {
   font-weight: 500 !important;
   letter-spacing: -0.01em;
   color: #e8e5f0 !important;
@@ -3074,7 +3074,7 @@ h2 {
 }
 
 /* Card background - warmer than cold blue surface */
-.card {
+:root:not([data-theme="light"]) .card {
   background: rgba(255,255,255,0.035) !important;
   border-color: rgba(255,255,255,0.07) !important;
 }

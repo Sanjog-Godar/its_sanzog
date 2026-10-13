@@ -426,7 +426,7 @@ img, video, svg, canvas {
 }
 
 /* =============================================================
-   HERO PORTRAIT — Professional Clean Design
+   HERO PORTRAIT ï¿½ Professional Clean Design
    ============================================================= */
 
 /* Hero grid: left content, right portrait */
@@ -925,7 +925,7 @@ img, video, svg, canvas {
 }
 
 /* =============================================================
-   PORTRAIT — PROFESSIONAL UPGRADE (no year badge)
+   PORTRAIT ï¿½ PROFESSIONAL UPGRADE (no year badge)
    ============================================================= */
 
 /* Override old portrait styles with cleaner version */
@@ -933,6 +933,9 @@ img, video, svg, canvas {
   border-radius: 20px !important;
   overflow: hidden;
   position: relative;
+}
+
+:root:not([data-theme="light"]) .portrait-frame {
   background: #0a0a10;
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.07),
@@ -946,7 +949,7 @@ img, video, svg, canvas {
 }
 
 /* Clean bottom fade */
-.portrait-overlay {
+:root:not([data-theme="light"]) .portrait-overlay {
   height: 55% !important;
   background: linear-gradient(
     to top,
@@ -970,7 +973,7 @@ img, video, svg, canvas {
   margin-top: 0.35rem;
 }
 
-.portrait-card-name {
+:root:not([data-theme="light"]) .portrait-card-name {
   font-size: 1rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.015em !important;
@@ -999,7 +1002,7 @@ img, video, svg, canvas {
 /* Remove the portrait-year element globally */
 .portrait-year { display: none !important; }
 
-/* Subtle corner tag: "Flutter · Next.js" instead of year */
+/* Subtle corner tag: "Flutter ï¿½ Next.js" instead of year */
 .portrait-stack-tag {
   position: absolute;
   top: 1rem;

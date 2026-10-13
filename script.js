@@ -150,25 +150,51 @@ document.addEventListener('DOMContentLoaded', function() {
         char.style.setProperty('--i', index);
     });
     
-    // Typing animation for subtitle
+    // Rotating typewriter animation for subtitle (type -> pause -> delete -> next)
     const typingText = $('.typing-text');
     if (typingText && !prefersReducedMotion) {
-        const text = 'Full Stack Developer';
-        let index = 0;
-        
-        const typeWriter = () => {
-            if (index < text.length) {
-                typingText.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100);
+        const phrases = [
+            'Full Stack Developer',
+            'Mobile App Developer',
+            'Flutter & Next.js Dev',
+            'Web & App Developer'
+        ];
+        let phraseIndex = 0;
+        let charIndex = phrases[0].length;
+        let isDeleting = false;
+
+        const typeLoop = () => {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                charIndex--;
+                typingText.textContent = currentPhrase.substring(0, charIndex);
+            } else {
+                charIndex++;
+                typingText.textContent = currentPhrase.substring(0, charIndex);
             }
+
+            let delta = isDeleting ? 45 : 85;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Fully typed, pause to read
+                isDeleting = true;
+                delta = 2200;
+            } else if (isDeleting && charIndex === 0) {
+                // Fully erased, switch to next phrase
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                delta = 350;
+            }
+
+            setTimeout(typeLoop, delta);
         };
-        
-        // Start typing animation after a delay
+
+        // Start backspacing first phrase after initial pause
         setTimeout(() => {
-            typingText.textContent = '';
-            typeWriter();
-        }, 2000);
+            isDeleting = true;
+            typeLoop();
+        }, 2200);
     }
     
     // Magnetic effect for buttons

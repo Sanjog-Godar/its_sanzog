@@ -899,28 +899,30 @@ img, video, svg, canvas {
   .social-link span { display: none; }
 }
 
-/* Desktop: also clean up the badge to not look like AI pill */
+/* Desktop: clean up badge with proper spacing */
 @media (min-width: 769px) {
   .hero-badge {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    padding: 0.45rem 1.1rem !important;
+    border-radius: 100px !important;
     animation: none !important;
-    box-shadow: none !important;
   }
 
   .hero-badge span:last-child {
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    color: #4a4860;
-    text-transform: uppercase;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: none !important;
   }
 
   .hero-badge .status-dot {
-    width: 6px;
-    height: 6px;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
   }
 }
 

@@ -113,18 +113,20 @@ body.light-theme {
   transform: rotate(0deg) scale(1);
 }
 
-/* Light mode toggle button appearance */
+/* Light mode toggle button appearance — purple aesthetic */
 [data-theme="light"] .theme-toggle-btn {
-  border-color: rgba(15, 23, 42, 0.15);
-  background: rgba(15, 23, 42, 0.05);
-  color: #0f172a;
+  border: 1px solid #4f46e5 !important;
+  background: rgba(79, 70, 229, 0.08) !important;
+  color: #4f46e5 !important;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.12) !important;
 }
 
 [data-theme="light"] .theme-toggle-btn:hover {
-  border-color: rgba(79, 70, 229, 0.4);
-  background: rgba(79, 70, 229, 0.1);
-  box-shadow: 0 0 16px rgba(79, 70, 229, 0.15);
-  color: #4f46e5;
+  border-color: #4338ca !important;
+  background: #4f46e5 !important;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35) !important;
+  color: #ffffff !important;
+  transform: scale(1.08) !important;
 }
 
 /* Nav CTA container adjustment */
@@ -278,10 +280,35 @@ body.light-theme {
 
 /* ── Hero Section ────────────────────────────────────────── */
 [data-theme="light"] .hero-badge {
-  background: rgba(79, 70, 229, 0.08) !important;
-  border: 1px solid rgba(79, 70, 229, 0.22) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  padding: 0.45rem 1.15rem !important;
+  border-radius: 100px !important;
+  background: rgba(79, 70, 229, 0.07) !important;
+  border: 1px solid rgba(79, 70, 229, 0.24) !important;
   color: #4338ca !important;
+  box-shadow: 0 1px 4px rgba(79, 70, 229, 0.08) !important;
+  width: fit-content !important;
+  line-height: 1.2 !important;
+}
+
+[data-theme="light"] .hero-badge span:last-child {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
   font-weight: 500 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: none !important;
+  color: #4338ca !important;
+}
+
+[data-theme="light"] .hero-badge .status-dot {
+  width: 7px !important;
+  height: 7px !important;
+  background: #10b981 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5) !important;
+  flex-shrink: 0 !important;
 }
 
 [data-theme="light"] .hero-greeting .greeting-text {
@@ -293,20 +320,40 @@ body.light-theme {
   font-weight: 500 !important;
 }
 
+[data-theme="light"] .cursor-blink {
+  color: #4f46e5 !important;
+  font-weight: 300 !important;
+  display: inline-block !important;
+  margin-left: 2px !important;
+}
+
 [data-theme="light"] .hero-description {
   color: #475569 !important;
 }
 
 [data-theme="light"] .btn-primary {
-  background: #0f172a !important;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
   color: #ffffff !important;
-  border: 1px solid #0f172a !important;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  border: 1px solid #4f46e5 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.32) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 [data-theme="light"] .btn-primary:hover {
-  background: #1e293b !important;
-  border-color: #1e293b !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%) !important;
+  border-color: #4338ca !important;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+[data-theme="light"] .btn-primary .btn-text {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .btn-primary .btn-arrow {
+  stroke: #ffffff !important;
+  fill: none !important;
 }
 
 [data-theme="light"] .btn-secondary {

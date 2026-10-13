@@ -486,8 +486,14 @@
 }
 
 /* ============================================================
-   EXPERIENCE SECTION  PROFESSIONAL TIMELINE
+   EXPERIENCE SECTION — PROFESSIONAL TIMELINE
    ============================================================ */
+
+#experience {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  position: relative;
+}
 
 .exp-timeline {
   display: flex;
@@ -496,6 +502,7 @@
   position: relative;
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 /* Timeline vertical line */
@@ -617,7 +624,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .exp-skills span {
@@ -640,6 +648,13 @@
 
 /* Responsive Experience */
 @media (max-width: 768px) {
+  #experience {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  .exp-timeline {
+    margin-bottom: 1.5rem;
+  }
   .exp-timeline::before {
     left: 8px;
   }

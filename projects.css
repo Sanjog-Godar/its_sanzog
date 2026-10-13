@@ -4,8 +4,8 @@
    ═══════════════════════════════════════════════════════════ */
 
 .sec#projects {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   position: relative;
 }
 
@@ -57,12 +57,15 @@
 .projects-tabs {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 8px;
+  padding: 6px 2px 14px 2px;
   margin-bottom: 36px;
+  width: 100%;
 }
 
 .projects-tabs::-webkit-scrollbar {
@@ -83,6 +86,7 @@
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -331,7 +335,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 32px;
+  margin-top: 40px;
+  margin-bottom: 24px;
 }
 
 .slider-dot {
@@ -352,6 +357,11 @@
 
 /* ── Responsive Adaptations ──────────────────────────────── */
 @media (max-width: 992px) {
+  .sec#projects {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   .project-card {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -361,7 +371,12 @@
   .projects-header-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .projects-tabs {
+    margin-bottom: 28px;
   }
 
   .slider-side-btn.prev {

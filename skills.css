@@ -1,6 +1,7 @@
 /* Skills Section - Custom Typography Design */
 .skills-section {
-  padding: 120px 0;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   max-width: 1080px;
   margin: 0 auto;
   opacity: 0;
@@ -41,7 +42,10 @@
 
 @media (max-width: 768px) {
   .skills-section {
-    padding: 80px 20px;
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .skills-grid {
     grid-template-columns: 1fr;

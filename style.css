@@ -2614,8 +2614,9 @@ button:focus-visible {
 }
 
 .sec {
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+  
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .head {
